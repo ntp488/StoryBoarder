@@ -28,6 +28,7 @@ public class Comp_DarkButton extends JButton {
         this.setPressedIcon(iconDown);
 
         this.setPreferredSize(dim);
+        //this.setMinimumSize(dim);
         this.setBorderPainted(false);
         this.setContentAreaFilled(false);
         this.setFocusPainted(false);

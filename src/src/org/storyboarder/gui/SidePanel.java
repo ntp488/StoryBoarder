@@ -20,6 +20,7 @@ public class SidePanel extends JPanel{
 
     public SidePanel(){
         this.setPreferredSize(new Dimension(200, 500));
+        //this.setMinimumSize(new Dimension(200, 500));
         this.setBackground(Color.DARK_GRAY);
         this.setBorder(BorderFactory.createEtchedBorder());
 
