@@ -1,7 +1,5 @@
 package org.storyboarder.gui;
 
-import org.storyboarder.gui.actions.*;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -58,7 +56,13 @@ public class WindowControlPanel extends JMenuBar {
 
         @Override
         public void mousePressed(MouseEvent e) {
-
+            if (e.getComponent().equals(minimizeButton)) {
+                window.setState(Frame.ICONIFIED);
+            } else if (e.getComponent().equals(loadProjectButton)) {
+                System.out.println("Load Project");
+            } else if (e.getComponent().equals(saveProjectButton)) {
+                System.out.println("Save Project");
+            }
         }
 
         @Override
@@ -84,10 +88,9 @@ public class WindowControlPanel extends JMenuBar {
         fileMenu = new JMenu("File");
 
         loadProjectButton = new JMenuItem("Load");
-        loadProjectButton.setAction(new LoadAction());
-
+        loadProjectButton.addMouseListener(windowFunctionsListener);
         saveProjectButton = new JMenuItem("Save");
-        saveProjectButton.setAction(new SaveAction());
+        saveProjectButton.addMouseListener(windowFunctionsListener);
 
         fileMenu.add(loadProjectButton);
         fileMenu.add(saveProjectButton);
