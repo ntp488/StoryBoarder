@@ -1,7 +1,5 @@
 package org.storyboarder.gui;
 
-import sun.applet.Main;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,6 +9,7 @@ import java.awt.*;
 public class WindowControlPanel extends JMenuBar {
     private JMenu fileMenu = new JMenu("File");
     private MainWindow window;
+
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
         this.setPreferredSize(new Dimension(100, 35));

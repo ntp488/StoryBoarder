@@ -4,23 +4,18 @@ import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-
-import com.sun.deploy.uitoolkit.DragListener;
 import org.storyboarder.gui.components.*;
 
 /**
  * Created by Nathan on 1/23/2017.
  */
 public class MainWindow extends JFrame {
-    //Dimension dim = new Dimension(500, 500);
-    //GridBagLayout layout = new GridBagLayout();
-    //GridBagConstraints constraints = new GridBagConstraints();
     private GridLayout layout;
     private ComponentResizer compResizer;
     private SidePanel sidePanel;
     private WindowControlPanel controlPanel;
 
-    Point offset;
+    private Point offset;
     private MouseInputListener dragListener = new MouseInputListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
@@ -85,9 +80,6 @@ public class MainWindow extends JFrame {
                 )
         );
 
-        //constraints.anchor = GridBagConstraints.WEST;
-        //constraints.fill = GridBagConstraints.NONE;
-        //layout.setConstraints(sidePanel, constraints);
         layout.setColumns(3);
         layout.addLayoutComponent("Sidepanel", sidePanel);
         this.add(sidePanel);
