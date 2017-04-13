@@ -1,5 +1,7 @@
 package org.storyboarder.gui;
 
+import org.storyboarder.gui.actions.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -10,14 +12,16 @@ import java.awt.event.MouseListener;
  */
 public class WindowControlPanel extends JMenuBar {
     private JMenu fileMenu, exitButton, maximizeButton, minimizeButton;
+    private JMenuItem loadProjectButton, saveProjectButton;
     private MainWindow window;
     private BoxLayout layout;
-    private Dimension previousWindowSize = new Dimension(500, 500),
+    private Dimension previousWindowSize = new Dimension(900, 450),
             maximizedWindowSize;
     private Point previousWindowLocation = new Point(0, 0);
     private MouseListener windowFunctionsListener = new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
+            //TODO: Fix bug where window will maximize incorrectly when window is resized before clicking maximize the first time
             if (e.getComponent().equals(exitButton)) {
                 System.exit(0);
             } else if (e.getComponent().equals(maximizeButton)) {
@@ -74,9 +78,22 @@ public class WindowControlPanel extends JMenuBar {
     };
 
     public WindowControlPanel(MainWindow mainWindow) {
-        fileMenu = new JMenu("File");
         window = mainWindow;
 
+        //CREATING FILE MENU -------------------------------------------------
+        fileMenu = new JMenu("File");
+
+        loadProjectButton = new JMenuItem("Load");
+        loadProjectButton.setAction(new LoadAction());
+
+        saveProjectButton = new JMenuItem("Save");
+        saveProjectButton.setAction(new SaveAction());
+
+        fileMenu.add(loadProjectButton);
+        fileMenu.add(saveProjectButton);
+        //--------------------------------------------------------------------
+
+        //CREATING AND ADDING WINDOW FUNCTION BUTTONS ------------------------
         //TODO: replace minimize button image
         minimizeButton = new JMenu();
         ImageIcon icon = new ImageIcon("images/exitbutton.png");
@@ -96,6 +113,7 @@ public class WindowControlPanel extends JMenuBar {
         newimg = icon.getImage().getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         exitButton.setIcon(icon);
+        //---------------------------------------------------------
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
 
@@ -127,4 +145,5 @@ public class WindowControlPanel extends JMenuBar {
     public MainWindow getMainWindow() {
         return window;
     }
+
 }

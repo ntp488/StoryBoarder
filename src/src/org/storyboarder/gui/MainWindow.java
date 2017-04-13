@@ -67,19 +67,13 @@ public class MainWindow extends JFrame {
         controlPanel = new WindowControlPanel(this);
 
         //TODO: make minimum window size matter...
-        //this.setMinimumSize(new Dimension(200, 200));
         this.setLayout(layout);
         this.setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setUndecorated(true);
         BorderFactory.createLineBorder(Color.black);
         compResizer.registerComponent(this);
-
-        this.setMinimumSize(
-                new Dimension(sidePanel.getWidth() + controlPanel.getWidth()
-                        , sidePanel.getHeight() + controlPanel.getHeight()
-                )
-        );
+        this.setMinimumSize(new Dimension(900, 450));
 
         this.setPreferredSize(
                 new Dimension(sidePanel.getWidth() + controlPanel.getWidth()
