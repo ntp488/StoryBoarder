@@ -4,19 +4,17 @@ import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-
 import org.storyboarder.gui.components.*;
-
-import static com.sun.webkit.graphics.WCImage.getImage;
 
 /**
  * Created by Nathan on 1/23/2017.
  */
 public class MainWindow extends JFrame {
-    private GridLayout layout;
+    private GridBagLayout layout;
+    private GridBagConstraints constraints;
     private ComponentResizer compResizer;
     private SidePanel sidePanel;
+    private MainPanel mainPanel;
     private WindowControlPanel controlPanel;
 
     private Point offset;
@@ -60,9 +58,12 @@ public class MainWindow extends JFrame {
     };
 
     public MainWindow() {
-        layout = new GridLayout();
+        layout = new GridBagLayout();
+        constraints = new GridBagConstraints();
+        //layout = new GridLayout();
         compResizer = new ComponentResizer();
         sidePanel = new SidePanel();
+        mainPanel = new MainPanel();
         controlPanel = new WindowControlPanel(this);
 
         this.setLayout(layout);
@@ -84,9 +85,19 @@ public class MainWindow extends JFrame {
                 )
         );
 
-        layout.setColumns(3);
+        constraints.weightx = .1;
+        constraints.gridheight = GridBagConstraints.REMAINDER;
+        constraints.fill = GridBagConstraints.BOTH;
+        layout.setConstraints(sidePanel, constraints);
         layout.addLayoutComponent("Sidepanel", sidePanel);
         this.add(sidePanel);
+
+        constraints.weightx = 1.0;
+        constraints.gridwidth = GridBagConstraints.REMAINDER;
+        constraints.anchor = GridBagConstraints.WEST;
+        layout.setConstraints(mainPanel, constraints);
+        layout.addLayoutComponent("Mainpanel", mainPanel);
+        this.add(mainPanel);
 
         controlPanel.addMouseListener(dragListener);
         controlPanel.addMouseMotionListener(dragListener);
