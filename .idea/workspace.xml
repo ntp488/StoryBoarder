@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+              <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#588:2777" expanded="false" />
@@ -591,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492107701244</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adds icon">
+      <created>1492109097210</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492109097210</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -647,7 +652,8 @@
     <MESSAGE value="Adds resizing, changes to gridlayout, adds menubar, adds dragging" />
     <MESSAGE value="Clean up" />
     <MESSAGE value="Working window controls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working window controls" />
+    <MESSAGE value="adds icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds icon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1145,7 +1151,7 @@
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#588:2777" expanded="false" />
