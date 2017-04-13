@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/exitbutton.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/SidePanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/SidePanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/components/Comp_DarkButton.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/components/Comp_DarkButton.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,6 +17,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/StoryBoarder$Story_Boarder.coverage" NAME="Story Boarder Coverage Results" MODIFIED="1492065125616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -46,8 +50,8 @@
       <file leaf-file-name="Comp_DarkButton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="37" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="129">
+              <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#506:1361" expanded="false" />
@@ -86,15 +90,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -310,6 +314,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -324,6 +342,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ntp48\Documents\GitHub\StoryBoarder\images" />
       <recent name="C:\Users\Nathan\IdeaProjects\Story Boarder\images" />
     </key>
   </component>
@@ -632,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492061899506</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Clean up">
+      <created>1492062301377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492062301377</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -659,11 +685,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29716024" sideWeight="0.69739586" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1564482" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12760417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -685,7 +712,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Convenience Push" />
     <MESSAGE value="Adds resizing, changes to gridlayout, adds menubar, adds dragging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds resizing, changes to gridlayout, adds menubar, adds dragging" />
+    <MESSAGE value="Clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,8 +767,8 @@
           <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -786,8 +814,8 @@
           <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -815,8 +843,8 @@
           <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,8 +905,8 @@
           <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -931,8 +959,8 @@
           <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -992,8 +1020,8 @@
           <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1074,28 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1108,8 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="129">
+          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#506:1361" expanded="false" />
@@ -1119,6 +1125,28 @@
             <element signature="method#mouseEntered#0;class#506:1361" expanded="false" />
             <element signature="method#mouseExited#0;class#506:1361" expanded="false" />
             <element signature="method#mouseMoved#0;class#506:1361" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
