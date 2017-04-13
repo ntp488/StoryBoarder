@@ -4,8 +4,11 @@ import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import org.storyboarder.gui.components.*;
+
+import static com.sun.webkit.graphics.WCImage.getImage;
 
 /**
  * Created by Nathan on 1/23/2017.
@@ -89,11 +92,16 @@ public class MainWindow extends JFrame {
         controlPanel.addMouseMotionListener(dragListener);
         this.setJMenuBar(controlPanel);
 
+        //TODO: replace taskbar and window icon
+        ImageIcon icon = new ImageIcon("images/exitbutton.png");
+        this.setIconImage(icon.getImage());
+
         this.pack();
         this.setResizable(true);
         this.setVisible(true);
     }
 
     public static void main(String[] args) {
+
     }
 }

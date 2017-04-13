@@ -77,12 +77,14 @@ public class WindowControlPanel extends JMenuBar {
         fileMenu = new JMenu("File");
         window = mainWindow;
 
+        //TODO: replace minimize button image
         minimizeButton = new JMenu();
         ImageIcon icon = new ImageIcon("images/exitbutton.png");
         Image newimg = icon.getImage().getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         minimizeButton.setIcon(icon);
 
+        //TODO: replace maximize button image
         maximizeButton = new JMenu();
         icon = new ImageIcon("images/exitbutton.png");
         newimg = icon.getImage().getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);

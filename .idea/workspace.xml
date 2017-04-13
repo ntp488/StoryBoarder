@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="Comp_DarkButton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="60">
+              <caret line="18" column="68" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,18 +56,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="65" column="79" lean-forward="false" selection-start-line="65" selection-start-column="79" selection-end-line="65" selection-end-column="79" />
+            <state relative-caret-position="253">
+              <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#507:1362" expanded="false" />
-                <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-                <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-                <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-                <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+                <element signature="class#592:1447" expanded="false" />
+                <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+                <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+                <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+                <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,18 +76,20 @@
       <file leaf-file-name="SidePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="323">
               <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="112">
+              <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#588:2777" expanded="false" />
@@ -131,8 +133,8 @@
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/StoryBoarder.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java" />
-        <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
       </list>
     </option>
   </component>
@@ -582,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492062301377</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working window controls">
+      <created>1492107701244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1492107701244</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -637,7 +646,8 @@
     <MESSAGE value="Convenience Push" />
     <MESSAGE value="Adds resizing, changes to gridlayout, adds menubar, adds dragging" />
     <MESSAGE value="Clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
+    <MESSAGE value="Working window controls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working window controls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -674,11 +684,11 @@
           <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -687,7 +697,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -721,11 +733,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -734,7 +746,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -768,11 +782,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,7 +795,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -807,11 +823,11 @@
           <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -836,7 +852,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -869,11 +887,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,7 +916,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -923,11 +943,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -952,7 +972,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -984,11 +1006,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1013,7 +1035,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,26 +1109,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="323">
           <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="68" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#592:1447" expanded="false" />
+            <element signature="method#mouseClicked#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseEntered#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseExited#0;class#592:1447" expanded="false" />
+            <element signature="method#mouseMoved#0;class#592:1447" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="112">
+          <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#588:2777" expanded="false" />
@@ -1113,21 +1154,6 @@
             <element signature="method#mouseReleased#0;class#588:2777" expanded="false" />
             <element signature="method#mouseEntered#0;class#588:2777" expanded="false" />
             <element signature="method#mouseExited#0;class#588:2777" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="65" column="79" lean-forward="false" selection-start-line="65" selection-start-column="79" selection-end-line="65" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#507:1362" expanded="false" />
-            <element signature="method#mouseClicked#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseEntered#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseExited#0;class#507:1362" expanded="false" />
-            <element signature="method#mouseMoved#0;class#507:1362" expanded="false" />
           </folding>
         </state>
       </provider>
