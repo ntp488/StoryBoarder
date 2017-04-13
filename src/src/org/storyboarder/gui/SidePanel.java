@@ -17,7 +17,6 @@ public class SidePanel extends JPanel{
     private JButton button = new Comp_DarkButton(new Dimension(150, 30));
 
     public SidePanel(){
-        this.setPreferredSize(new Dimension(200, 500));
         this.setBackground(Color.DARK_GRAY);
         this.setBorder(BorderFactory.createEtchedBorder());
 

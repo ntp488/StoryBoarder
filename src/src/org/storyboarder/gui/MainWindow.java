@@ -66,6 +66,8 @@ public class MainWindow extends JFrame {
         mainPanel = new MainPanel();
         controlPanel = new WindowControlPanel(this);
 
+        //TODO: make minimum window size matter...
+        //this.setMinimumSize(new Dimension(200, 200));
         this.setLayout(layout);
         this.setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -86,6 +88,7 @@ public class MainWindow extends JFrame {
         );
 
         constraints.weightx = .1;
+        constraints.weighty = 1;
         constraints.gridheight = GridBagConstraints.REMAINDER;
         constraints.fill = GridBagConstraints.BOTH;
         layout.setConstraints(sidePanel, constraints);
