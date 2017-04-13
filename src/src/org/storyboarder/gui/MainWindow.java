@@ -1,61 +1,106 @@
 package org.storyboarder.gui;
 
-import org.storyboarder.gui.components.Comp_DarkButton;
-import org.storyboarder.gui.components.ComponentResizer;
-
 import javax.swing.*;
-import javax.swing.border.Border;
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+
+import com.sun.deploy.uitoolkit.DragListener;
+import org.storyboarder.gui.components.*;
 
 /**
  * Created by Nathan on 1/23/2017.
  */
 public class MainWindow extends JFrame {
-    Dimension dim = new Dimension(500, 500);
-    GridBagLayout layout = new GridBagLayout();
-    GridBagConstraints constraints = new GridBagConstraints();
-    //ComponentResizer compResizer = new ComponentResizer();
+    //Dimension dim = new Dimension(500, 500);
+    //GridBagLayout layout = new GridBagLayout();
+    //GridBagConstraints constraints = new GridBagConstraints();
+    private GridLayout layout;
+    private ComponentResizer compResizer;
+    private SidePanel sidePanel;
+    private WindowControlPanel controlPanel;
 
-    SidePanel sidePanel = new SidePanel();
-    WindowControlPanel controlPanel = new WindowControlPanel();
+    Point offset;
+    private MouseInputListener dragListener = new MouseInputListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            offset = new Point(e.getX(), e.getY());
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseDragged(MouseEvent e) {
+            WindowControlPanel menuBar = (WindowControlPanel) e.getComponent();
+            MainWindow window = menuBar.getMainWindow();
+            window.setLocation(e.getXOnScreen() - offset.x, e.getYOnScreen() - offset.y);
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+
+        }
+    };
 
     public MainWindow() {
-        this.setLayout(layout);
-        this.setExtendedState( this.getExtendedState()|JFrame.MAXIMIZED_BOTH );
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        layout = new GridLayout();
+        compResizer = new ComponentResizer();
+        sidePanel = new SidePanel();
+        controlPanel = new WindowControlPanel(this);
 
-        //this.setUndecorated(false);
+        this.setLayout(layout);
+        this.setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.setUndecorated(true);
         BorderFactory.createLineBorder(Color.black);
-        //compResizer.registerComponent(this);
+        compResizer.registerComponent(this);
 
         this.setMinimumSize(
                 new Dimension(sidePanel.getWidth() + controlPanel.getWidth()
-                    ,sidePanel.getHeight() + controlPanel.getHeight()
+                        , sidePanel.getHeight() + controlPanel.getHeight()
                 )
         );
 
         this.setPreferredSize(
                 new Dimension(sidePanel.getWidth() + controlPanel.getWidth()
-                        ,sidePanel.getHeight() + controlPanel.getHeight()
+                        , sidePanel.getHeight() + controlPanel.getHeight()
                 )
         );
 
-        constraints.anchor = GridBagConstraints.WEST;
+        //constraints.anchor = GridBagConstraints.WEST;
         //constraints.fill = GridBagConstraints.NONE;
-        layout.setConstraints(sidePanel, constraints);
+        //layout.setConstraints(sidePanel, constraints);
+        layout.setColumns(3);
+        layout.addLayoutComponent("Sidepanel", sidePanel);
         this.add(sidePanel);
 
-        constraints.anchor = GridBagConstraints.NORTHEAST;
-        //constraints.fill = GridBagConstraints.NONE;
-        layout.setConstraints(controlPanel, constraints);
-        this.add(controlPanel);
-        
+        controlPanel.addMouseListener(dragListener);
+        controlPanel.addMouseMotionListener(dragListener);
+        this.setJMenuBar(controlPanel);
+
         this.pack();
-        this.setResizable(false);
+        this.setResizable(true);
         this.setVisible(true);
     }
 
     public static void main(String[] args) {
-
     }
 }

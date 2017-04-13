@@ -1,9 +1,7 @@
 package org.storyboarder.gui;
 
 import org.storyboarder.gui.components.Comp_DarkButton;
-
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import java.awt.*;
 
 /**

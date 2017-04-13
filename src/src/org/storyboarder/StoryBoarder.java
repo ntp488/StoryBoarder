@@ -1,7 +1,6 @@
 package org.storyboarder;
 
 import org.storyboarder.gui.MainWindow;
-
 import javax.swing.*;
 
 /**
