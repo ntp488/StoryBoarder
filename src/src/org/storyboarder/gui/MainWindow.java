@@ -4,6 +4,8 @@ import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
 import org.storyboarder.gui.components.*;
 
 /**
@@ -99,9 +101,14 @@ public class MainWindow extends JFrame {
         controlPanel.addMouseMotionListener(dragListener);
         this.setJMenuBar(controlPanel);
 
-        //TODO: replace taskbar and window icon
-        ImageIcon icon = new ImageIcon("images/exitbutton.png");
-        this.setIconImage(icon.getImage());
+        ArrayList<Image> imageIcons = new ArrayList<>();
+        ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
+        imageIcons.add(icon.getImage());
+        imageIcons.add(icon.getImage().getScaledInstance(128, 128, java.awt.Image.SCALE_SMOOTH));
+        imageIcons.add(icon.getImage().getScaledInstance(64, 64, java.awt.Image.SCALE_SMOOTH));
+        imageIcons.add(icon.getImage().getScaledInstance(32, 32, java.awt.Image.SCALE_SMOOTH));
+        imageIcons.add(icon.getImage().getScaledInstance(16, 16, java.awt.Image.SCALE_SMOOTH));
+        this.setIconImages(imageIcons);
 
         this.pack();
         this.setResizable(true);

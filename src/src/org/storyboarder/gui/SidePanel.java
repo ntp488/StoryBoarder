@@ -14,10 +14,7 @@ public class SidePanel extends JPanel{
     private BoxLayout layout;
 
     public SidePanel(){
-        createCharacterButton = new Comp_DarkButton(buttonDimension);
-        createPlaceButton = new Comp_DarkButton(buttonDimension);
-        createObjectButton = new Comp_DarkButton(buttonDimension);
-        createCategoryButton = new Comp_DarkButton(buttonDimension);
+        CreatePanelItems();
 
         layout = new BoxLayout(this, BoxLayout.Y_AXIS);
         this.setLayout(layout);
@@ -25,27 +22,32 @@ public class SidePanel extends JPanel{
         this.setBorder(BorderFactory.createEtchedBorder());
 
         this.add(new JToolBar.Separator(separatorDimension));
-
-        createCharacterButton.setText("Create Character");
-        createCharacterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.add(createCharacterButton);
-
         this.add(new JToolBar.Separator(separatorDimension));
-
-        createPlaceButton.setText("Create Place");
-        createPlaceButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.add(createPlaceButton);
-
         this.add(new JToolBar.Separator(separatorDimension));
-
-        createObjectButton.setText("Create Object");
-        createObjectButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.add(createObjectButton);
 
         this.add(Box.createVerticalGlue());
 
+        this.add(createCategoryButton);
+    }
+
+    private void CreatePanelItems() {
+        createCharacterButton = new Comp_DarkButton(buttonDimension);
+        createCharacterButton.setText("Create Character");
+        createCharacterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        createPlaceButton = new Comp_DarkButton(buttonDimension);
+        createPlaceButton.setText("Create Place");
+        createPlaceButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        createObjectButton = new Comp_DarkButton(buttonDimension);
+        createObjectButton.setText("Create Object");
+        createObjectButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        createCategoryButton = new Comp_DarkButton(buttonDimension);
         createCategoryButton.setText("Create Category");
         createCategoryButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        this.add(createCategoryButton);
     }
 }

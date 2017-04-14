@@ -9,6 +9,7 @@ import java.awt.event.MouseListener;
  * Created by Nathan on 1/24/2017.
  */
 public class WindowControlPanel extends JMenuBar {
+    private JLabel logo;
     private JMenu fileMenu, editMenu, exitButton, maximizeButton, minimizeButton;
     private JMenuItem loadProjectButton, saveProjectButton;
     private MainWindow window;
@@ -72,55 +73,27 @@ public class WindowControlPanel extends JMenuBar {
 
         @Override
         public void mouseEntered(MouseEvent e) {
-
+            Object obj = e.getComponent();
+            if (obj instanceof JMenu) {
+                JMenu menu = (JMenu) e.getComponent();
+                menu.setSelected(true);
+            }
         }
 
         @Override
         public void mouseExited(MouseEvent e) {
-
+            Object obj = e.getComponent();
+            if (obj instanceof JMenu) {
+                JMenu menu = (JMenu) e.getComponent();
+                menu.setSelected(false);
+            }
         }
     };
 
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
 
-        //CREATING FILE MENU -------------------------------------------------
-        fileMenu = new JMenu("File");
-
-        loadProjectButton = new JMenuItem("Load");
-        loadProjectButton.addMouseListener(windowFunctionsListener);
-        saveProjectButton = new JMenuItem("Save");
-        saveProjectButton.addMouseListener(windowFunctionsListener);
-
-        fileMenu.add(loadProjectButton);
-        fileMenu.add(saveProjectButton);
-        //--------------------------------------------------------------------
-
-        //CREATING EDIT MENU -------------------------------------------------
-        editMenu = new JMenu("Edit");
-        //--------------------------------------------------------------------
-
-        //CREATING AND ADDING WINDOW FUNCTION BUTTONS ------------------------
-        //TODO: replace minimize button image
-        minimizeButton = new JMenu();
-        ImageIcon icon = new ImageIcon("images/exitbutton.png");
-        Image newimg = icon.getImage().getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
-        icon = new ImageIcon(newimg);
-        minimizeButton.setIcon(icon);
-
-        //TODO: replace maximize button image
-        maximizeButton = new JMenu();
-        icon = new ImageIcon("images/exitbutton.png");
-        newimg = icon.getImage().getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
-        icon = new ImageIcon(newimg);
-        maximizeButton.setIcon(icon);
-
-        exitButton = new JMenu();
-        icon = new ImageIcon("images/exitbutton.png");
-        newimg = icon.getImage().getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
-        icon = new ImageIcon(newimg);
-        exitButton.setIcon(icon);
-        //---------------------------------------------------------
+        CreatePanelItems();
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
 
@@ -128,44 +101,88 @@ public class WindowControlPanel extends JMenuBar {
         this.setBorder(BorderFactory.createEtchedBorder());
         this.setLayout(layout);
 
-        fileMenu.setForeground(Color.white);
+        this.add(logo);
+
+        this.add(new JToolBar.Separator(new Dimension(5, 5)));
+
         this.add(fileMenu);
 
-        JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
-        separator.setMaximumSize(new Dimension(10, 25));
-        separator.setForeground(Color.LIGHT_GRAY);
-        separator.setBackground(Color.DARK_GRAY);
-        this.add(separator);
+        JSeparator separatorTwo = new JSeparator(SwingConstants.VERTICAL);
+        AddSeparator(separatorTwo);
 
-        editMenu.setForeground(Color.white);
         this.add(editMenu);
 
-        JSeparator separatorTwo = new JSeparator(SwingConstants.VERTICAL);
-        separatorTwo.setMaximumSize(new Dimension(10, 25));
-        separatorTwo.setForeground(Color.LIGHT_GRAY);
-        separatorTwo.setBackground(Color.DARK_GRAY);
-        this.add(separatorTwo);
+        JSeparator separatorThree = new JSeparator(SwingConstants.VERTICAL);
+        AddSeparator(separatorThree);
 
         this.add(Box.createHorizontalGlue());
 
-        minimizeButton.setForeground(Color.white);
-        minimizeButton.setBackground(Color.DARK_GRAY);
-        minimizeButton.addMouseListener(windowFunctionsListener);
         this.add(minimizeButton);
-
-        maximizeButton.setForeground(Color.white);
-        maximizeButton.setBackground(Color.DARK_GRAY);
-        maximizeButton.addMouseListener(windowFunctionsListener);
         this.add(maximizeButton);
-
-        exitButton.setForeground(Color.white);
-        exitButton.setBackground(Color.DARK_GRAY);
-        exitButton.addMouseListener(windowFunctionsListener);
         this.add(exitButton);
     }
 
     public MainWindow getMainWindow() {
         return window;
+    }
+
+    private void CreatePanelItems() {
+        ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
+        Image newimg = icon.getImage().getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
+        icon = new ImageIcon(newimg);
+        logo = new JLabel(icon);
+
+        //CREATING FILE MENU -------------------------------------------------
+        fileMenu = new JMenu("File");
+        DecorateMenu(fileMenu);
+
+        loadProjectButton = new JMenuItem("Load");
+        loadProjectButton.addMouseListener(windowFunctionsListener);
+
+        saveProjectButton = new JMenuItem("Save");
+        saveProjectButton.addMouseListener(windowFunctionsListener);
+
+        fileMenu.add(loadProjectButton);
+        fileMenu.add(saveProjectButton);
+
+        //CREATING EDIT MENU -------------------------------------------------
+        editMenu = new JMenu("Edit");
+        DecorateMenu(editMenu);
+        //CREATING WINDOW FUNCTION BUTTONS -----------------------------------
+        minimizeButton = new JMenu();
+        SetMenuIcon(minimizeButton, "images/minimizebutton.png");
+        DecorateMenu(minimizeButton);
+        minimizeButton.addMouseListener(windowFunctionsListener);
+
+        maximizeButton = new JMenu();
+        SetMenuIcon(maximizeButton, "images/maximizebutton.png");
+        DecorateMenu(maximizeButton);
+        maximizeButton.addMouseListener(windowFunctionsListener);
+
+        exitButton = new JMenu();
+        SetMenuIcon(exitButton, "images/exitbutton.png");
+        DecorateMenu(exitButton);
+        exitButton.addMouseListener(windowFunctionsListener);
+    }
+
+    private void AddSeparator(JSeparator separator) {
+        separator = new JSeparator(SwingConstants.VERTICAL);
+        separator.setMaximumSize(new Dimension(10, 25));
+        separator.setForeground(Color.LIGHT_GRAY);
+        separator.setBackground(Color.DARK_GRAY);
+        this.add(separator);
+    }
+
+    private void SetMenuIcon(JMenu menu, String filename) {
+        ImageIcon icon = new ImageIcon(filename);
+        Image newimg = icon.getImage().getScaledInstance(20, 15, java.awt.Image.SCALE_SMOOTH);
+        icon = new ImageIcon(newimg);
+        menu.setIcon(icon);
+    }
+
+    private void DecorateMenu(JMenu menu) {
+        menu.setForeground(Color.white);
+        menu.setBackground(Color.DARK_GRAY);
     }
 
 }
