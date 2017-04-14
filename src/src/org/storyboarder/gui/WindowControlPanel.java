@@ -9,7 +9,7 @@ import java.awt.event.MouseListener;
  * Created by Nathan on 1/24/2017.
  */
 public class WindowControlPanel extends JMenuBar {
-    private JMenu fileMenu, exitButton, maximizeButton, minimizeButton;
+    private JMenu fileMenu, editMenu, exitButton, maximizeButton, minimizeButton;
     private JMenuItem loadProjectButton, saveProjectButton;
     private MainWindow window;
     private BoxLayout layout;
@@ -96,6 +96,10 @@ public class WindowControlPanel extends JMenuBar {
         fileMenu.add(saveProjectButton);
         //--------------------------------------------------------------------
 
+        //CREATING EDIT MENU -------------------------------------------------
+        editMenu = new JMenu("Edit");
+        //--------------------------------------------------------------------
+
         //CREATING AND ADDING WINDOW FUNCTION BUTTONS ------------------------
         //TODO: replace minimize button image
         minimizeButton = new JMenu();
@@ -126,6 +130,21 @@ public class WindowControlPanel extends JMenuBar {
 
         fileMenu.setForeground(Color.white);
         this.add(fileMenu);
+
+        JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
+        separator.setMaximumSize(new Dimension(10, 25));
+        separator.setForeground(Color.LIGHT_GRAY);
+        separator.setBackground(Color.DARK_GRAY);
+        this.add(separator);
+
+        editMenu.setForeground(Color.white);
+        this.add(editMenu);
+
+        JSeparator separatorTwo = new JSeparator(SwingConstants.VERTICAL);
+        separatorTwo.setMaximumSize(new Dimension(10, 25));
+        separatorTwo.setForeground(Color.LIGHT_GRAY);
+        separatorTwo.setBackground(Color.DARK_GRAY);
+        this.add(separatorTwo);
 
         this.add(Box.createHorizontalGlue());
 

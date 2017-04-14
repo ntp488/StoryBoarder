@@ -60,7 +60,6 @@ public class MainWindow extends JFrame {
     public MainWindow() {
         layout = new GridBagLayout();
         constraints = new GridBagConstraints();
-        //layout = new GridLayout();
         compResizer = new ComponentResizer();
         sidePanel = new SidePanel();
         mainPanel = new MainPanel();
