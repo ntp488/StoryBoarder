@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/StoryboarderLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maximizebutton.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/minimizebutton.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/SidePanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/SidePanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,7 +45,7 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
+            <state relative-caret-position="267">
               <caret line="104" column="70" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -84,7 +76,7 @@
       <file leaf-file-name="SidePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="97">
               <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -96,14 +88,14 @@
       <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="105" column="55" lean-forward="false" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
+            <state relative-caret-position="403">
+              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#683:3749" expanded="false" />
                 <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-                <element signature="e#4626#4627#0" expanded="true" />
-                <element signature="e#4655#4656#0" expanded="true" />
+                <element signature="e#4448#4449#0" expanded="true" />
+                <element signature="e#4477#4478#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -728,7 +720,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492138655026</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Cleaned a lot, added helper functions, replaced icons">
+      <created>1492145025077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1492145025077</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -790,7 +789,8 @@
     <MESSAGE value="Adds actions and menuItems" />
     <MESSAGE value="Working JMenuItems" />
     <MESSAGE value="Better side panel, adds more buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better side panel, adds more buttons" />
+    <MESSAGE value="Cleaned a lot, added helper functions, replaced icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned a lot, added helper functions, replaced icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -821,8 +821,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,8 +868,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -915,8 +915,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -944,8 +944,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,8 +1006,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1060,8 +1060,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1121,8 +1121,8 @@
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1201,16 +1201,18 @@
         <state relative-caret-position="306">
           <caret line="18" column="68" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/StoryBoarder.java">
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="97">
+          <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,7 +1230,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
+        <state relative-caret-position="267">
           <caret line="104" column="70" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1241,26 +1243,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/StoryBoarder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="105" column="55" lean-forward="false" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
+        <state relative-caret-position="403">
+          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#683:3749" expanded="false" />
             <element signature="method#mouseReleased#0;class#683:3749" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4477#4478#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -107,13 +107,11 @@ public class WindowControlPanel extends JMenuBar {
 
         this.add(fileMenu);
 
-        JSeparator separatorTwo = new JSeparator(SwingConstants.VERTICAL);
-        AddSeparator(separatorTwo);
+        AddSeparator();
 
         this.add(editMenu);
 
-        JSeparator separatorThree = new JSeparator(SwingConstants.VERTICAL);
-        AddSeparator(separatorThree);
+        AddSeparator();
 
         this.add(Box.createHorizontalGlue());
 
@@ -165,8 +163,8 @@ public class WindowControlPanel extends JMenuBar {
         exitButton.addMouseListener(windowFunctionsListener);
     }
 
-    private void AddSeparator(JSeparator separator) {
-        separator = new JSeparator(SwingConstants.VERTICAL);
+    private void AddSeparator() {
+        JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
         separator.setMaximumSize(new Dimension(10, 25));
         separator.setForeground(Color.LIGHT_GRAY);
         separator.setBackground(Color.DARK_GRAY);
