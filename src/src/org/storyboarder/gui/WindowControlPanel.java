@@ -14,42 +14,23 @@ public class WindowControlPanel extends JMenuBar {
     private JMenuItem loadProjectButton, saveProjectButton;
     private MainWindow window;
     private BoxLayout layout;
+
     private Dimension previousWindowSize = new Dimension(900, 450),
             maximizedWindowSize;
     private Point previousWindowLocation = new Point(0, 0);
     private MouseListener windowFunctionsListener = new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            //TODO: Fix bug where window will maximize incorrectly when window is resized before clicking maximize the first time
             if (e.getComponent().equals(exitButton)) {
                 System.exit(0);
             } else if (e.getComponent().equals(maximizeButton)) {
-                if (maximizedWindowSize == null) {
-                    maximizedWindowSize = window.getSize();
-                    System.out.println("Was null");
-                    System.out.println(window.getSize() + "Check 1");
-                    System.out.println(maximizedWindowSize + "Check 1");
-                }
-
                 if (window.getSize().height != maximizedWindowSize.height ||
-                        window.getSize().width != maximizedWindowSize.width) {
-                    previousWindowSize = window.getSize();
-                    System.out.println(window.getSize() + "Check 2");
-                    System.out.println(maximizedWindowSize + "Check 2");
-                    previousWindowLocation = window.getLocation();
-
-                    window.setSize(maximizedWindowSize);
-                    window.setLocation(new Point(0, 0));
+                window.getSize().width != maximizedWindowSize.width) {
+                    MaximizeWindow();
                 } else {
-                    System.out.println(window.getSize() + "Check 3");// should be the same
-                    System.out.println(maximizedWindowSize + "Check 3");
                     window.setSize(previousWindowSize);
                     window.setLocation(previousWindowLocation);
-                    System.out.println(window.getSize() + "Check 4");// should be different
-                    System.out.println(maximizedWindowSize + "Check 4");
                 }
-                System.out.println(window.getSize() + "Result");
-                System.out.println(maximizedWindowSize + "Result");
             } else if (e.getComponent().equals(minimizeButton)) {
                 window.setState(Frame.ICONIFIED);
             }
@@ -92,6 +73,7 @@ public class WindowControlPanel extends JMenuBar {
 
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
+        maximizedWindowSize = window.GetMaximumWindowSize();
 
         CreatePanelItems();
 
@@ -102,19 +84,12 @@ public class WindowControlPanel extends JMenuBar {
         this.setLayout(layout);
 
         this.add(logo);
-
         this.add(new JToolBar.Separator(new Dimension(5, 5)));
-
         this.add(fileMenu);
-
         AddSeparator();
-
         this.add(editMenu);
-
         AddSeparator();
-
         this.add(Box.createHorizontalGlue());
-
         this.add(minimizeButton);
         this.add(maximizeButton);
         this.add(exitButton);
@@ -181,6 +156,13 @@ public class WindowControlPanel extends JMenuBar {
     private void DecorateMenu(JMenu menu) {
         menu.setForeground(Color.white);
         menu.setBackground(Color.DARK_GRAY);
+    }
+
+    private void MaximizeWindow() {
+        previousWindowSize = window.getSize();
+        previousWindowLocation = window.getLocation();
+        window.setSize(maximizedWindowSize);
+        window.setLocation(new Point(0, 0));
     }
 
 }

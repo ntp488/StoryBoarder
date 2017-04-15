@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  * Created by Nathan on 1/23/2017.
  */
 public class SidePanel extends JPanel{
-    private JButton createCharacterButton, createPlaceButton, createObjectButton, createCategoryButton;
+    private JButton createCharacterButton, createCategoryButton;
     private Dimension buttonDimension = new Dimension(150, 30),
             separatorDimension = new Dimension(100, 5);
     private BoxLayout layout;
@@ -29,13 +29,8 @@ public class SidePanel extends JPanel{
         this.add(createCharacterButton);
         this.add(new JToolBar.Separator(separatorDimension));
         this.add(createCategoryButton);
-        //this.add(createPlaceButton);
-        //this.add(new JToolBar.Separator(separatorDimension));
-        //this.add(createObjectButton);
 
         this.add(Box.createVerticalGlue());
-
-        //this.add(createCategoryButton);
     }
 
     private void CreatePanelItems() {
@@ -54,14 +49,6 @@ public class SidePanel extends JPanel{
                 }
             }
         });
-
-        /*createPlaceButton = new Comp_DarkButton(buttonDimension);
-        createPlaceButton.setText("Create Place");
-        createPlaceButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        createObjectButton = new Comp_DarkButton(buttonDimension);
-        createObjectButton.setText("Create Object");
-        createObjectButton.setAlignmentX(Component.CENTER_ALIGNMENT);*/
 
         createCategoryButton = new Comp_DarkButton(buttonDimension);
         createCategoryButton.setText("Create Category");

@@ -18,7 +18,11 @@ public class MainWindow extends JFrame {
     private SidePanel sidePanel;
     private MainPanel mainPanel;
     private WindowControlPanel controlPanel;
-
+    private int taskbarheight = Toolkit.getDefaultToolkit().getScreenSize().height
+        - GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height;
+    private Dimension maximizedWindowSize
+        = new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,
+        Toolkit.getDefaultToolkit().getScreenSize().height - taskbarheight);
     private Point offset;
     private MouseInputListener dragListener = new MouseInputListener() {
         @Override
@@ -60,26 +64,16 @@ public class MainWindow extends JFrame {
     };
 
     public MainWindow() {
-        layout = new GridBagLayout();
-        constraints = new GridBagConstraints();
-        compResizer = new ComponentResizer();
-        sidePanel = new SidePanel();
-        mainPanel = new MainPanel();
-        controlPanel = new WindowControlPanel(this);
+        InitializeWindowItems();
 
         this.setLayout(layout);
-        this.setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setUndecorated(true);
         BorderFactory.createLineBorder(Color.black);
         compResizer.registerComponent(this);
         this.setMinimumSize(new Dimension(900, 450));
-
-        this.setPreferredSize(
-                new Dimension(sidePanel.getWidth() + controlPanel.getWidth()
-                        , sidePanel.getHeight() + controlPanel.getHeight()
-                )
-        );
+        this.setSize(maximizedWindowSize);
+        this.setPreferredSize(maximizedWindowSize);
 
         constraints.weightx = .05;
         constraints.weighty = 1;
@@ -100,14 +94,7 @@ public class MainWindow extends JFrame {
         controlPanel.addMouseMotionListener(dragListener);
         this.setJMenuBar(controlPanel);
 
-        ArrayList<Image> imageIcons = new ArrayList<>();
-        ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
-        imageIcons.add(icon.getImage());
-        imageIcons.add(icon.getImage().getScaledInstance(128, 128, java.awt.Image.SCALE_SMOOTH));
-        imageIcons.add(icon.getImage().getScaledInstance(64, 64, java.awt.Image.SCALE_SMOOTH));
-        imageIcons.add(icon.getImage().getScaledInstance(32, 32, java.awt.Image.SCALE_SMOOTH));
-        imageIcons.add(icon.getImage().getScaledInstance(16, 16, java.awt.Image.SCALE_SMOOTH));
-        this.setIconImages(imageIcons);
+        this.setIconImages(GenerateWindowIcons());
 
         this.pack();
         this.setResizable(true);
@@ -116,5 +103,29 @@ public class MainWindow extends JFrame {
 
     public static void main(String[] args) {
 
+    }
+
+    public Dimension GetMaximumWindowSize() {
+        return maximizedWindowSize;
+    }
+
+    private ArrayList<Image> GenerateWindowIcons() {
+        ArrayList<Image> imageIcons = new ArrayList<>();
+        ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
+        imageIcons.add(icon.getImage());
+        imageIcons.add(icon.getImage().getScaledInstance(128, 128, java.awt.Image.SCALE_SMOOTH));
+        imageIcons.add(icon.getImage().getScaledInstance(64, 64, java.awt.Image.SCALE_SMOOTH));
+        imageIcons.add(icon.getImage().getScaledInstance(32, 32, java.awt.Image.SCALE_SMOOTH));
+        imageIcons.add(icon.getImage().getScaledInstance(16, 16, java.awt.Image.SCALE_SMOOTH));
+        return imageIcons;
+    }
+
+    private void InitializeWindowItems() {
+        layout = new GridBagLayout();
+        constraints = new GridBagConstraints();
+        compResizer = new ComponentResizer();
+        sidePanel = new SidePanel();
+        mainPanel = new MainPanel();
+        controlPanel = new WindowControlPanel(this);
     }
 }
