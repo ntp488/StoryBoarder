@@ -1,8 +1,7 @@
-package org.storyboarder.cardCreation;
-
-import org.storyboarder.gui.MainWindow;
+package org.storyboarder.gui.components;
 
 import javax.swing.*;
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -10,16 +9,16 @@ import java.awt.event.MouseListener;
 /**
  * Created by ntp48 on 4/14/2017.
  */
-public class CardCreationControlPanel extends JMenuBar{
+public class SimpleMenuBar extends JMenuBar{
     private JLabel logo;
     private JMenu exitButton, minimizeButton;
-    private CardCreationWindow window;
+    private JFrame window;
     private BoxLayout layout;
-    private Point previousWindowLocation = new Point(0, 0);
+    private Point previousWindowLocation = new Point(0, 0), offset;
+
     private MouseListener windowFunctionsListener = new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            //TODO: Fix bug where window will maximize incorrectly when window is resized before clicking maximize the first time
             if (e.getComponent().equals(exitButton)) {
                 window.dispose();
             } else if (e.getComponent().equals(minimizeButton)) {
@@ -58,9 +57,47 @@ public class CardCreationControlPanel extends JMenuBar{
         }
     };
 
-    public CardCreationControlPanel(CardCreationWindow cardCreationWindow) {
-        window = cardCreationWindow;
+    private MouseInputListener dragListener = new MouseInputListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
 
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            offset = new Point(e.getX(), e.getY());
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseDragged(MouseEvent e) {
+            SimpleMenuBar menuBar = (SimpleMenuBar) e.getComponent();
+            JFrame window = menuBar.getParentWindow();
+            window.setLocation(e.getXOnScreen() - offset.x, e.getYOnScreen() - offset.y);
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+
+        }
+    };
+
+    public SimpleMenuBar(JFrame parentWindow) {
+        window = parentWindow;
         CreatePanelItems();
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
@@ -70,14 +107,15 @@ public class CardCreationControlPanel extends JMenuBar{
         this.setLayout(layout);
 
         this.add(logo);
-
         this.add(Box.createHorizontalGlue());
-
         this.add(minimizeButton);
         this.add(exitButton);
+
+        this.addMouseListener(dragListener);
+        this.addMouseMotionListener(dragListener);
     }
 
-    public CardCreationWindow getCardCreationWindow() {
+    public JFrame getParentWindow() {
         return window;
     }
 

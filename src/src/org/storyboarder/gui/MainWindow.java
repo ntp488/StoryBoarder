@@ -5,7 +5,6 @@ import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-
 import org.storyboarder.gui.components.*;
 
 /**
