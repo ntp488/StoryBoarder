@@ -10,7 +10,7 @@ import java.awt.event.MouseListener;
  * Created by ntp48 on 4/14/2017.
  */
 public class SimpleMenuBar extends JMenuBar{
-    private JLabel logo;
+    private JLabel logo, name;
     private JMenu exitButton, minimizeButton;
     private JFrame window;
     private BoxLayout layout;
@@ -115,30 +115,53 @@ public class SimpleMenuBar extends JMenuBar{
         this.addMouseMotionListener(dragListener);
     }
 
+    public SimpleMenuBar(JFrame parentWindow, String windowName) {
+        window = parentWindow;
+        name = new JLabel(windowName);
+        CreatePanelItems();
+
+        layout = new BoxLayout(this, BoxLayout.X_AXIS);
+
+        this.setBackground(Color.DARK_GRAY);
+        this.setBorder(BorderFactory.createEtchedBorder());
+        this.setLayout(layout);
+
+        this.add(logo);
+        this.add(new JToolBar.Separator(new Dimension(5, 5)));
+        name.setForeground(Color.WHITE);
+        this.add(name);
+        this.add(Box.createHorizontalGlue());
+        this.add(minimizeButton);
+        this.add(exitButton);
+
+        this.addMouseListener(dragListener);
+        this.addMouseMotionListener(dragListener);
+    }
+
     public JFrame getParentWindow() {
         return window;
     }
 
     private void CreatePanelItems() {
-        ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("StoryboarderLogo.png"));
         Image newimg = icon.getImage().getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         logo = new JLabel(icon);
 
         //CREATING WINDOW FUNCTION BUTTONS -----------------------------------
         minimizeButton = new JMenu();
-        SetMenuIcon(minimizeButton, "images/minimizebutton.png");
+        SetMenuIcon(minimizeButton, "minimizebutton.png");
         DecorateMenu(minimizeButton);
         minimizeButton.addMouseListener(windowFunctionsListener);
 
         exitButton = new JMenu();
-        SetMenuIcon(exitButton, "images/exitbutton.png");
+        SetMenuIcon(exitButton, "exitbutton.png");
         DecorateMenu(exitButton);
         exitButton.addMouseListener(windowFunctionsListener);
     }
 
     private void SetMenuIcon(JMenu menu, String filename) {
-        ImageIcon icon = new ImageIcon(filename);
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource(filename));
         Image newimg = icon.getImage().getScaledInstance(20, 15, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         menu.setIcon(icon);

@@ -11,17 +11,17 @@ public class Comp_DarkButton extends JButton {
     private Image img, newimg, imgRollover, newimgRollover, imgDown, newImgDown;
 
     public Comp_DarkButton(Dimension dim) {
-        icon = new ImageIcon("images/DarkButton.gif");
+        icon = new ImageIcon(ClassLoader.getSystemResource("DarkButton.gif"));
         img = icon.getImage();
         newimg = img.getScaledInstance( dim.width, dim.height,  java.awt.Image.SCALE_SMOOTH ) ;
         icon = new ImageIcon(newimg);
 
-        iconRollover = new ImageIcon("images/DarkButtonRollover.gif");
+        iconRollover = new ImageIcon(ClassLoader.getSystemResource("DarkButtonRollover.gif"));
         imgRollover = iconRollover.getImage();
         newimgRollover = imgRollover.getScaledInstance( dim.width, dim.height,  java.awt.Image.SCALE_SMOOTH ) ;
         iconRollover = new ImageIcon(newimgRollover);
 
-        iconDown = new ImageIcon("images/DarkButtonDownWhite.gif");
+        iconDown = new ImageIcon(ClassLoader.getSystemResource("DarkButtonDownWhite.gif"));
         imgDown = iconDown.getImage();
         newImgDown = imgDown.getScaledInstance( dim.width, dim.height,  java.awt.Image.SCALE_SMOOTH ) ;
         iconDown = new ImageIcon(newImgDown);

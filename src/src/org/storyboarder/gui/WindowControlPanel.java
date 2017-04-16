@@ -1,5 +1,7 @@
 package org.storyboarder.gui;
 
+import com.sun.xml.internal.ws.api.ResourceLoader;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -14,6 +16,7 @@ public class WindowControlPanel extends JMenuBar {
     private JMenuItem loadProjectButton, saveProjectButton;
     private MainWindow window;
     private BoxLayout layout;
+    private JFrame fileSelectionWindow;
 
     private Dimension previousWindowSize = new Dimension(900, 450),
             maximizedWindowSize;
@@ -38,12 +41,22 @@ public class WindowControlPanel extends JMenuBar {
 
         @Override
         public void mousePressed(MouseEvent e) {
-            if (e.getComponent().equals(minimizeButton)) {
-                window.setState(Frame.ICONIFIED);
-            } else if (e.getComponent().equals(loadProjectButton)) {
+            if (e.getComponent().equals(loadProjectButton)) {
                 System.out.println("Load Project");
+                if (fileSelectionWindow != null) {
+                    fileSelectionWindow.dispose();
+                    fileSelectionWindow = new FileSelectionWindow();
+                } else {
+                    fileSelectionWindow = new FileSelectionWindow();
+                }
             } else if (e.getComponent().equals(saveProjectButton)) {
                 System.out.println("Save Project");
+                if (fileSelectionWindow != null) {
+                    fileSelectionWindow.dispose();
+                    fileSelectionWindow = new FileSelectionWindow();
+                } else {
+                    fileSelectionWindow = new FileSelectionWindow();
+                }
             }
         }
 
@@ -100,7 +113,7 @@ public class WindowControlPanel extends JMenuBar {
     }
 
     private void CreatePanelItems() {
-        ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("StoryboarderLogo.png"));
         Image newimg = icon.getImage().getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         logo = new JLabel(icon);
@@ -123,17 +136,17 @@ public class WindowControlPanel extends JMenuBar {
         DecorateMenu(editMenu);
         //CREATING WINDOW FUNCTION BUTTONS -----------------------------------
         minimizeButton = new JMenu();
-        SetMenuIcon(minimizeButton, "images/minimizebutton.png");
+        SetMenuIcon(minimizeButton, "minimizebutton.png");
         DecorateMenu(minimizeButton);
         minimizeButton.addMouseListener(windowFunctionsListener);
 
         maximizeButton = new JMenu();
-        SetMenuIcon(maximizeButton, "images/maximizebutton.png");
+        SetMenuIcon(maximizeButton, "maximizebutton.png");
         DecorateMenu(maximizeButton);
         maximizeButton.addMouseListener(windowFunctionsListener);
 
         exitButton = new JMenu();
-        SetMenuIcon(exitButton, "images/exitbutton.png");
+        SetMenuIcon(exitButton, "exitbutton.png");
         DecorateMenu(exitButton);
         exitButton.addMouseListener(windowFunctionsListener);
     }
@@ -147,7 +160,7 @@ public class WindowControlPanel extends JMenuBar {
     }
 
     private void SetMenuIcon(JMenu menu, String filename) {
-        ImageIcon icon = new ImageIcon(filename);
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource(filename));
         Image newimg = icon.getImage().getScaledInstance(20, 15, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         menu.setIcon(icon);

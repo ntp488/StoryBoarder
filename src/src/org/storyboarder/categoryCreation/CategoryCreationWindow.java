@@ -37,6 +37,6 @@ public class CategoryCreationWindow extends JFrame {
         private void CreateWindowItems() {
             layout = new GridBagLayout();
             constraints = new GridBagConstraints();
-            simpleMenuBar = new SimpleMenuBar(this);
+            simpleMenuBar = new SimpleMenuBar(this, "Category Creator");
         }
 }

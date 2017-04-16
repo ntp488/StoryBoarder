@@ -1,6 +1,7 @@
 package org.storyboarder.gui;
 
 import org.storyboarder.cardCreation.CardCreationWindow;
+import org.storyboarder.categoryCreation.CategoryCreationWindow;
 import org.storyboarder.gui.components.Comp_DarkButton;
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +16,7 @@ public class SidePanel extends JPanel{
     private Dimension buttonDimension = new Dimension(150, 30),
             separatorDimension = new Dimension(100, 5);
     private BoxLayout layout;
-    private CardCreationWindow cardCreationWindow;
+    private JFrame creationWindow;
 
     public SidePanel(){
         CreatePanelItems();
@@ -41,11 +42,11 @@ public class SidePanel extends JPanel{
         createCharacterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (cardCreationWindow == null) {
-                    cardCreationWindow = new CardCreationWindow();
+                if (creationWindow == null) {
+                    creationWindow = new CardCreationWindow();
                 } else {
-                    cardCreationWindow.dispose();
-                    cardCreationWindow = new CardCreationWindow();
+                    creationWindow.dispose();
+                    creationWindow = new CardCreationWindow();
                 }
             }
         });
@@ -53,6 +54,18 @@ public class SidePanel extends JPanel{
         createCategoryButton = new Comp_DarkButton(buttonDimension);
         createCategoryButton.setText("Create Category");
         createCategoryButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        createCategoryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (creationWindow == null) {
+                    creationWindow = new CategoryCreationWindow();
+                } else {
+                    creationWindow.dispose();
+                    creationWindow = new CategoryCreationWindow();
+                }
+            }
+        });
     }
 
 
