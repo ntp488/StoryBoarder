@@ -3,6 +3,7 @@ package org.storyboarder.gui;
 import com.sun.xml.internal.ws.api.ResourceLoader;
 
 import javax.swing.*;
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -84,6 +85,46 @@ public class WindowControlPanel extends JMenuBar {
         }
     };
 
+    private Point offset;
+    private MouseInputListener dragListener = new MouseInputListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            offset = new Point(e.getX(), e.getY());
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseDragged(MouseEvent e) {
+            WindowControlPanel menuBar = (WindowControlPanel) e.getComponent();
+            MainWindow window = menuBar.getMainWindow();
+            window.setLocation(e.getXOnScreen() - offset.x, e.getYOnScreen() - offset.y);
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+
+        }
+    };
+
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
         maximizedWindowSize = window.GetMaximumWindowSize();
@@ -92,6 +133,8 @@ public class WindowControlPanel extends JMenuBar {
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
 
+        this.addMouseListener(dragListener);
+        this.addMouseMotionListener(dragListener);
         this.setBackground(Color.DARK_GRAY);
         this.setBorder(BorderFactory.createEtchedBorder());
         this.setLayout(layout);

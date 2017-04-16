@@ -22,45 +22,6 @@ public class MainWindow extends JFrame {
     private Dimension maximizedWindowSize
         = new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,
         Toolkit.getDefaultToolkit().getScreenSize().height - taskbarheight);
-    private Point offset;
-    private MouseInputListener dragListener = new MouseInputListener() {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mousePressed(MouseEvent e) {
-            offset = new Point(e.getX(), e.getY());
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseDragged(MouseEvent e) {
-            WindowControlPanel menuBar = (WindowControlPanel) e.getComponent();
-            MainWindow window = menuBar.getMainWindow();
-            window.setLocation(e.getXOnScreen() - offset.x, e.getYOnScreen() - offset.y);
-        }
-
-        @Override
-        public void mouseMoved(MouseEvent e) {
-
-        }
-    };
 
     public MainWindow() {
         InitializeWindowItems();
@@ -89,8 +50,6 @@ public class MainWindow extends JFrame {
         layout.addLayoutComponent("Mainpanel", mainPanel);
         this.add(mainPanel);
 
-        controlPanel.addMouseListener(dragListener);
-        controlPanel.addMouseMotionListener(dragListener);
         this.setJMenuBar(controlPanel);
 
         this.setIconImages(GenerateWindowIcons());
