@@ -7,34 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/StoryBoarder_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/resources.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/Card.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/Category.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/FileProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/cardCreation/CardEditorWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/categoryCreation/CategoryEditorWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/FileSelectionWindow.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/DarkButton.gif" afterPath="$PROJECT_DIR$/src/resources/DarkButton.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/DarkButtonDown.gif" afterPath="$PROJECT_DIR$/src/resources/DarkButtonDown.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/DarkButtonDownWhite.gif" afterPath="$PROJECT_DIR$/src/resources/DarkButtonDownWhite.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/DarkButtonRollover.gif" afterPath="$PROJECT_DIR$/src/resources/DarkButtonRollover.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/StoryboarderLogo.png" afterPath="$PROJECT_DIR$/src/resources/StoryboarderLogo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/exitbutton.png" afterPath="$PROJECT_DIR$/src/resources/exitbutton.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/maximizebutton.png" afterPath="$PROJECT_DIR$/src/resources/maximizebutton.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/minimizebutton.png" afterPath="$PROJECT_DIR$/src/resources/minimizebutton.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/MainWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/SidePanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/SidePanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/WindowControlPanel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/components/Comp_DarkButton.class" afterPath="$PROJECT_DIR$/out/production/src/org/storyboarder/gui/components/Comp_DarkButton.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src.iml" afterPath="$PROJECT_DIR$/src/src.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/cardCreation/CardCreationWindow.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/cardCreation/CardCreationWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/categoryCreation/CategoryCreationWindow.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/categoryCreation/CategoryCreationWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/SimpleMenuBar.java" afterPath="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/SimpleMenuBar.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,23 +41,24 @@
       <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2383">
-              <caret line="162" column="78" lean-forward="false" selection-start-line="162" selection-start-column="78" selection-end-line="162" selection-end-column="78" />
+            <state relative-caret-position="884">
+              <caret line="57" column="72" lean-forward="false" selection-start-line="57" selection-start-column="72" selection-end-line="57" selection-end-column="72" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3774#3775#0" expanded="true" />
-                <element signature="e#3803#3804#0" expanded="true" />
+                <element signature="e#3798#3799#0" expanded="false" />
+                <element signature="e#3827#3828#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comp_DarkButton.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Comp_DarkButton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
-              <folding />
+            <state relative-caret-position="493">
+              <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,14 +66,18 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="272">
+              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
                 <element signature="method#mouseClicked#0;class#983:1838" expanded="false" />
+                <element signature="e#1150#1151#0" expanded="false" />
+                <element signature="e#1212#1213#0" expanded="false" />
                 <element signature="method#mouseEntered#0;class#983:1838" expanded="false" />
                 <element signature="method#mouseExited#0;class#983:1838" expanded="false" />
                 <element signature="method#mouseMoved#0;class#983:1838" expanded="false" />
+                <element signature="e#3302#3303#0" expanded="false" />
+                <element signature="e#3344#3345#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,10 +86,10 @@
       <file leaf-file-name="CardCreationWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/cardCreation/CardCreationWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="476">
               <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -118,12 +98,13 @@
       <file leaf-file-name="SimpleMenuBar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/SimpleMenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
+            <state relative-caret-position="2635">
               <caret line="163" column="78" lean-forward="false" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3889#3890#0" expanded="true" />
-                <element signature="e#3918#3919#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="false" />
+                <element signature="e#1968#1969#0" expanded="false" />
+                <element signature="e#3889#3890#0" expanded="false" />
+                <element signature="e#3918#3919#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -132,11 +113,19 @@
       <file leaf-file-name="FileSelectionWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/FileSelectionWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="561">
+              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Readme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,11 +133,9 @@
       <file leaf-file-name="CategoryCreationWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/categoryCreation/CategoryCreationWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="612">
               <caret line="39" column="52" lean-forward="false" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,18 +185,18 @@
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/cardCreation/CardCreationWindow.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/categoryCreation/CategoryCreationWindow.java" />
-        <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/FileSelectionWindow.java" />
-        <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/SimpleMenuBar.java" />
         <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java" />
+        <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java" />
+        <option value="$PROJECT_DIR$/src/src/org/storyboarder/gui/FileSelectionWindow.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -226,42 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
@@ -321,10 +272,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="storyboarder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -344,10 +291,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -374,10 +317,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -393,6 +332,94 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storyboarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categoryCreation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storyboarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cardCreation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -400,9 +427,13 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="storyboarder" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -590,6 +621,40 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -616,6 +681,23 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="Story Boarder" type="Application" factoryName="Application">
@@ -758,7 +840,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492293532568</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added jre and files for jar to exe using launch4j and Inno Setup">
+      <created>1492319183195</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492319183195</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -771,26 +860,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.47510982" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19254659" sideWeight="0.329429" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19238901" sideWeight="0.33229166" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19254659" sideWeight="0.670571" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19238901" sideWeight="0.66770834" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1564482" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2672035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -802,8 +889,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.47510982" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -824,7 +913,8 @@
     <MESSAGE value="Fixed separator code" />
     <MESSAGE value="Fixes maximizing over taskbar, adds category creation package, rearranges and pretty-fies some code" />
     <MESSAGE value="Added SimpleMenuBar class, cleaned some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added SimpleMenuBar class, cleaned some code" />
+    <MESSAGE value="Added jre and files for jar to exe using launch4j and Inno Setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added jre and files for jar to exe using launch4j and Inno Setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -837,31 +927,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/SidePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/StoryBoarder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/StoryBoarder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -875,11 +940,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#mouseClicked#0;class#983:1838" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
             <element signature="method#mouseEntered#0;class#983:1838" expanded="false" />
             <element signature="method#mouseExited#0;class#983:1838" expanded="false" />
             <element signature="method#mouseMoved#0;class#983:1838" expanded="false" />
+            <element signature="e#3302#3303#0" expanded="false" />
+            <element signature="e#3344#3345#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -889,9 +958,8 @@
         <state relative-caret-position="187">
           <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3798#3799#0" expanded="false" />
+            <element signature="e#3827#3828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,11 +994,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#mouseClicked#0;class#983:1838" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
             <element signature="method#mouseEntered#0;class#983:1838" expanded="false" />
             <element signature="method#mouseExited#0;class#983:1838" expanded="false" />
             <element signature="method#mouseMoved#0;class#983:1838" expanded="false" />
+            <element signature="e#3302#3303#0" expanded="false" />
+            <element signature="e#3344#3345#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -940,9 +1012,8 @@
         <state relative-caret-position="153">
           <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3798#3799#0" expanded="false" />
+            <element signature="e#3827#3828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -984,11 +1055,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#mouseClicked#0;class#983:1838" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
             <element signature="method#mouseEntered#0;class#983:1838" expanded="false" />
             <element signature="method#mouseExited#0;class#983:1838" expanded="false" />
             <element signature="method#mouseMoved#0;class#983:1838" expanded="false" />
+            <element signature="e#3302#3303#0" expanded="false" />
+            <element signature="e#3344#3345#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -998,9 +1073,8 @@
         <state relative-caret-position="180">
           <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3798#3799#0" expanded="false" />
+            <element signature="e#3827#3828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1046,21 +1120,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Tictactoe-Repo/TicTacToe/src/test/acceptancetest/TicTacToeTests.robot" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Tictactoe-Repo/TicTacToe/src/test/java/npell/tests/TicTacToeTest.java" />
     <entry file="file://$PROJECT_DIR$/images/DarkButton.jpg" />
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/ComponentResizer.java">
@@ -1082,14 +1142,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/AbstractSimpleWindowControlPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/AbstractSimpleWindowControlPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1114,7 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,14 +1202,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Images.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Images.properties" />
     <entry file="file://$PROJECT_DIR$/src/resources/DarkButton.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1165,76 +1210,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/cardCreation/CardCreationWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="476">
           <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/categoryCreation/CategoryCreationWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="612">
           <caret line="39" column="52" lean-forward="false" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/FileSelectionWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2383">
-          <caret line="162" column="78" lean-forward="false" selection-start-line="162" selection-start-column="78" selection-end-line="162" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#3803#3804#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/SimpleMenuBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="163" column="78" lean-forward="false" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3889#3890#0" expanded="true" />
-            <element signature="e#3918#3919#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="272">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#mouseClicked#0;class#983:1838" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
             <element signature="method#mouseEntered#0;class#983:1838" expanded="false" />
             <element signature="method#mouseExited#0;class#983:1838" expanded="false" />
             <element signature="method#mouseMoved#0;class#983:1838" expanded="false" />
+            <element signature="e#3302#3303#0" expanded="false" />
+            <element signature="e#3344#3345#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/Comp_DarkButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
+        <state relative-caret-position="493">
+          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/WindowControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="57" column="72" lean-forward="false" selection-start-line="57" selection-start-column="72" selection-end-line="57" selection-end-column="72" />
+          <folding>
+            <element signature="e#3798#3799#0" expanded="false" />
+            <element signature="e#3827#3828#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/components/SimpleMenuBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="163" column="78" lean-forward="false" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
+          <folding>
+            <element signature="e#1906#1907#0" expanded="false" />
+            <element signature="e#1968#1969#0" expanded="false" />
+            <element signature="e#3889#3890#0" expanded="false" />
+            <element signature="e#3918#3919#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/org/storyboarder/gui/FileSelectionWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1246,8 +1330,8 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="library" />
               <type id="artifact" />
+              <type id="library" />
             </show-content>
           </artifact-editor>
           <last-edited>StoryBoarder:jar</last-edited>
