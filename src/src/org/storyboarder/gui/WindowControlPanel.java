@@ -45,17 +45,17 @@ public class WindowControlPanel extends JMenuBar {
                 System.out.println("Load Project");
                 if (fileSelectionWindow != null) {
                     fileSelectionWindow.dispose();
-                    fileSelectionWindow = new FileSelectionWindow();
+                    fileSelectionWindow = new FileSelectionWindow("Load");
                 } else {
-                    fileSelectionWindow = new FileSelectionWindow();
+                    fileSelectionWindow = new FileSelectionWindow("Load");
                 }
             } else if (e.getComponent().equals(saveProjectButton)) {
                 System.out.println("Save Project");
                 if (fileSelectionWindow != null) {
                     fileSelectionWindow.dispose();
-                    fileSelectionWindow = new FileSelectionWindow();
+                    fileSelectionWindow = new FileSelectionWindow("Save");
                 } else {
-                    fileSelectionWindow = new FileSelectionWindow();
+                    fileSelectionWindow = new FileSelectionWindow("Save");
                 }
             }
         }
