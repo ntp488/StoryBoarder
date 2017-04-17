@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by Nathan on 4/15/2017.
@@ -79,12 +80,35 @@ public class FileSelectionWindow extends JFrame{
     }
 
     private void LoadDeck(File file){
-
-        //TODO: Create handling for when no file exists with the chosen name
+        if (file.exists() && file.isDirectory()) {
+            System.out.println("I should perform loading here.");
+        } else {
+            //TODO: Create handling for when no file exists with the chosen name
+            System.out.println("You chose a file that doesn't exist.");
+        }
     }
 
     private void SaveDeck(File file) {
-        //TODO: Create handling for when a file already exists with the chosen name
+        if (file.exists()) {
+            //TODO: Create handling for when a file already exists with the chosen name
+            System.out.println("You chose a file that already exists.");
+        } else {
+            System.out.println("I should perform saving here if the chosen filename formatted correctly.");
+            if (file.getAbsolutePath().endsWith(".json")) {
+                System.out.println(file.getAbsolutePath() + " was formatted correctly");
+            } else {
+                File tempFile = file;
+                System.out.println(file.getAbsolutePath() + " was not formatted correctly");
+                file = new File(tempFile.getAbsolutePath() + ".json");
+            }
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println(file.getAbsolutePath());
+        }
+        this.dispose();
     }
 
 }

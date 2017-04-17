@@ -3,7 +3,7 @@ package storyboarder.gui;
 import storyboarder.Deck;
 import storyboarder.cardCreation.CardCreationWindow;
 import storyboarder.categoryCreation.CategoryCreationWindow;
-import storyboarder.gui.components.Comp_DarkButton;
+import storyboarder.gui.components.SimpleDarkButton;
 import storyboarder.gui.components.CustomTreeCellRenderer;
 
 import javax.swing.*;
@@ -43,7 +43,7 @@ public class SidePanel extends JPanel{
     }
 
     private void CreatePanelItems() {
-        createCharacterButton = new Comp_DarkButton(buttonDimension);
+        createCharacterButton = new SimpleDarkButton(buttonDimension);
         createCharacterButton.setText("Create Card");
         createCharacterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -59,7 +59,7 @@ public class SidePanel extends JPanel{
             }
         });
 
-        createCategoryButton = new Comp_DarkButton(buttonDimension);
+        createCategoryButton = new SimpleDarkButton(buttonDimension);
         createCategoryButton.setText("Create Category");
         createCategoryButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 

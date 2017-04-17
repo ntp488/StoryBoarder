@@ -6,11 +6,11 @@ import java.awt.*;
 /**
  * Created by Nathan on 1/23/2017.
  */
-public class Comp_DarkButton extends JButton {
+public class SimpleDarkButton extends JButton {
     private ImageIcon icon, iconRollover, iconDown;
     private Image img, newimg, imgRollover, newimgRollover, imgDown, newImgDown;
 
-    public Comp_DarkButton(Dimension dim) {
+    public SimpleDarkButton(Dimension dim) {
         icon = new ImageIcon(ClassLoader.getSystemResource("DarkButton.gif"));
         img = icon.getImage();
         newimg = img.getScaledInstance( dim.width, dim.height,  java.awt.Image.SCALE_SMOOTH ) ;
