@@ -95,15 +95,11 @@ public class FileSelectionWindow extends JFrame{
 
     private void SaveDeck(File file) {
         if (file.getAbsolutePath().endsWith(".json")) {
-            System.out.println(file.getAbsolutePath() + " was formatted correctly");
         } else {
             File tempFile = file;
-            System.out.println(file.getAbsolutePath() + " was not formatted correctly");
             file = new File(tempFile.getAbsolutePath() + ".json");
         }
         if (file.exists()) {
-            //TODO: Create handling for when a file already exists with the chosen name
-            System.out.println("You chose a file that already exists.");
             JOptionPane optionPane = new JOptionPane();
             int option = optionPane.showConfirmDialog(this,
         "You have chosen a file that already exists. Continuing will overwrite the previous file." +
@@ -111,14 +107,11 @@ public class FileSelectionWindow extends JFrame{
                 JOptionPane.QUESTION_MESSAGE);
             switch (option) {
                 case JOptionPane.NO_OPTION:
-                    System.out.println("No button clicked");
                     break;
                 case JOptionPane.YES_OPTION:
-                    System.out.println("Yes button clicked");
                     WriteFile(file);
                     break;
                 case JOptionPane.CLOSED_OPTION:
-                    System.out.println("JOptionPane closed");
                     break;
             }
         } else {
@@ -128,7 +121,6 @@ public class FileSelectionWindow extends JFrame{
     }
 
     private void WriteFile(File file) {
-        System.out.println("I should perform saving here.");
         try {
             file.createNewFile();
             ObjectMapper mapper = new ObjectMapper();
