@@ -1,12 +1,11 @@
 package storyboarder.gui.Panels;
 
 import storyboarder.gui.Windows.MainWindow;
+import storyboarder.gui.components.WindowDragListener;
 import storyboarder.gui.components.WindowFunctionsListener;
 
 import javax.swing.*;
-import javax.swing.event.MouseInputListener;
 import java.awt.*;
-import java.awt.event.MouseEvent;
 
 /**
  * Created by Nathan on 1/24/2017.
@@ -21,45 +20,7 @@ public class WindowControlPanel extends JMenuBar {
             maximizedWindowSize;
     public Point previousWindowLocation = new Point(0, 0);
     private WindowFunctionsListener windowFunctionsListener = new WindowFunctionsListener(this);
-    private Point offset;
-    private MouseInputListener dragListener = new MouseInputListener() {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mousePressed(MouseEvent e) {
-            offset = new Point(e.getX(), e.getY());
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseDragged(MouseEvent e) {
-            WindowControlPanel menuBar = (WindowControlPanel) e.getComponent();
-            MainWindow window = menuBar.getMainWindow();
-            window.setLocation(e.getXOnScreen() - offset.x, e.getYOnScreen() - offset.y);
-        }
-
-        @Override
-        public void mouseMoved(MouseEvent e) {
-
-        }
-    };
+    private WindowDragListener dragListener = new WindowDragListener();
 
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
