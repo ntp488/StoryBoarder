@@ -1,6 +1,6 @@
 package storyboarder;
 
-import storyboarder.gui.MainWindow;
+import storyboarder.gui.Windows.MainWindow;
 import javax.swing.*;
 
 /**

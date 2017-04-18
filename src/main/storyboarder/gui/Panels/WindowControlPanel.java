@@ -1,6 +1,7 @@
-package storyboarder.gui;
+package storyboarder.gui.Panels;
 
-import storyboarder.WindowFunctionsListener;
+import storyboarder.gui.Windows.MainWindow;
+import storyboarder.gui.components.WindowFunctionsListener;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;

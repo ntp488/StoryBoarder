@@ -1,10 +1,12 @@
-package storyboarder.gui;
+package storyboarder.gui.Windows;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-import storyboarder.Deck;
+import storyboarder.gui.Panels.MainPanel;
+import storyboarder.gui.Panels.SidePanel;
+import storyboarder.gui.Panels.WindowControlPanel;
 import storyboarder.gui.components.ComponentResizer;
 
 /**

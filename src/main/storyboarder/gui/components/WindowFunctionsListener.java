@@ -1,13 +1,13 @@
-package storyboarder;
+package storyboarder.gui.components;
 
-import storyboarder.gui.FileSelectionWindow;
-import storyboarder.gui.WindowControlPanel;
+import storyboarder.gui.Panels.WindowControlPanel;
+import storyboarder.gui.Windows.FileSelectionWindow;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import static storyboarder.gui.MainWindow.window;
+import static storyboarder.gui.Windows.MainWindow.window;
 
 /**
  * Created by Nathan on 4/18/2017.

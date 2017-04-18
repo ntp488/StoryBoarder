@@ -1,4 +1,4 @@
-package storyboarder.gui;
+package storyboarder.gui.Panels;
 
 import javax.swing.*;
 import java.awt.*;
