@@ -13,6 +13,13 @@ public class Category {
     public Category(String categoryName){
         name = categoryName;
         properties = new ArrayList<>();
+        cards = new ArrayList<>();
+    }
+
+    public Category() {
+        name = "DefaultCategoryName";
+        properties = new ArrayList<>();
+        cards = new ArrayList<>();
     }
 
     public void SetProperties(ArrayList<Property> propertyList){
@@ -25,12 +32,6 @@ public class Category {
 
     public void RemoveProperty(Property propertyToRemove) {
         properties.remove(propertyToRemove);
-    }
-
-    @Override
-    public String toString() {
-        //TODO: define method for parsing Categories and writing to file, then write this code
-        return "";
     }
 
     public void SetCards(ArrayList<Card> cardList) {
@@ -47,5 +48,22 @@ public class Category {
 
     public void RemoveCard(Card cardToRemove) {
         cards.remove(cardToRemove);
+    }
+
+    @Override
+    public String toString() {
+        String categoryAsString;
+        categoryAsString = "Category: " + name + "\n";
+        categoryAsString += "   Properties: \n";
+        for (Property prop : properties) {
+            categoryAsString += "       " + prop.toString() + "\n";
+        }
+        categoryAsString += "   Cards: \n";
+        if (cards != null) {
+            for (Card card : cards) {
+                categoryAsString += "       " + card.toString() + "\n";
+            }
+        }
+        return categoryAsString;
     }
 }

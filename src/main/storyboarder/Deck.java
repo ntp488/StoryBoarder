@@ -15,7 +15,6 @@ public class Deck {
         categories.add(new Category("Person"));//person
         categories.add(new Category("Place"));//place
         categories.add(new Category("Thing"));//thing
-
     }
 
     public String GetName() {
@@ -36,6 +35,16 @@ public class Deck {
 
     public void RemoveCategory(Category categoryToRemove) {
         categories.remove(categoryToRemove);
+    }
+
+    @Override
+    public String toString() {
+        String deckAsString;
+        deckAsString = "Deck: " + name + "\n";
+        for (Category cat : categories) {
+            deckAsString += cat.toString();
+        }
+        return deckAsString;
     }
 
 }

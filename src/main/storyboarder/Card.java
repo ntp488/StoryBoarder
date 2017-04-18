@@ -7,6 +7,10 @@ public class Card {
     private Category category;
     private String name, description;
 
+    public void Card() {
+
+    }
+
     public void SetCategory(Category newCategory) {
         category = newCategory;
     }
@@ -17,5 +21,10 @@ public class Card {
 
     public void SetDescription(String newDescription) {
         description = newDescription;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

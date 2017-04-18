@@ -2,6 +2,7 @@ package storyboarder.gui.Windows;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import storyboarder.Deck;
 import storyboarder.gui.Panels.SidePanel;
 import storyboarder.gui.components.SimpleMenuBar;
 import javax.swing.*;
@@ -82,12 +83,27 @@ public class FileSelectionWindow extends JFrame{
     }
 
     private void LoadDeck(File file){
-        if (file.exists() && file.isDirectory()) {
+        if (file.exists()) {
             //TODO: Create loading
-            System.out.println("I should perform loading here.");
+            ReadFile(file);
+            this.dispose();
         } else {
-            //TODO: Create handling for when no file exists with the chosen name
             System.out.println("You chose a file that doesn't exist.");
+            JOptionPane optionPane = new JOptionPane();
+            optionPane.showConfirmDialog(this,
+        "You have chosen a file that doesn't exist.", "Failed to Load",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void ReadFile(File file) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+            Deck loadedDeck = mapper.readValue(file, Deck.class);
+            System.out.println(loadedDeck.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -100,7 +116,7 @@ public class FileSelectionWindow extends JFrame{
         if (file.exists()) {
             JOptionPane optionPane = new JOptionPane();
             int option = optionPane.showConfirmDialog(this,
-        "You have chosen a file that already exists. Continuing will overwrite the previous file." +
+        "You have chosen a file that already exists. Continuing will overwrite the previous file. " +
                 "Do you want to continue?", "Overwrite Save", JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE);
             switch (option) {
