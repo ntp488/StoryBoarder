@@ -19,7 +19,7 @@ public class MainWindow extends JFrame {
     private WindowControlPanel controlPanel;
     private int taskbarheight = Toolkit.getDefaultToolkit().getScreenSize().height
         - GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height;
-    private Dimension maximizedWindowSize
+    public Dimension maximizedWindowSize
         = new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,
         Toolkit.getDefaultToolkit().getScreenSize().height - taskbarheight);
     public static MainWindow window;

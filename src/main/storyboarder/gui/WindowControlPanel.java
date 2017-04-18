@@ -1,91 +1,25 @@
 package storyboarder.gui;
 
+import storyboarder.WindowFunctionsListener;
+
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 /**
  * Created by Nathan on 1/24/2017.
  */
 public class WindowControlPanel extends JMenuBar {
     private JLabel logo;
-    private JMenu fileMenu, editMenu, exitButton, maximizeButton, minimizeButton;
-    private JMenuItem loadProjectButton, saveProjectButton;
+    public JMenu fileMenu, editMenu, exitButton, maximizeButton, minimizeButton;
+    public JMenuItem loadProjectButton, saveProjectButton;
     private MainWindow window;
     private BoxLayout layout;
-    private JFrame fileSelectionWindow;
-    private Dimension previousWindowSize = new Dimension(900, 450),
+    public Dimension previousWindowSize = new Dimension(900, 450),
             maximizedWindowSize;
-    private Point previousWindowLocation = new Point(0, 0);
-    private MouseListener windowFunctionsListener = new MouseListener() {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-            if (e.getComponent().equals(exitButton)) {
-                System.exit(0);
-            } else if (e.getComponent().equals(maximizeButton)) {
-                if (window.getSize().height != maximizedWindowSize.height ||
-                window.getSize().width != maximizedWindowSize.width) {
-                    MaximizeWindow();
-                } else {
-                    window.setSize(previousWindowSize);
-                    window.setLocation(previousWindowLocation);
-                }
-            } else if (e.getComponent().equals(minimizeButton)) {
-                window.setState(Frame.ICONIFIED);
-            }
-        }
-
-        @Override
-        public void mousePressed(MouseEvent e) {
-            if (e.getComponent().equals(loadProjectButton)) {
-                System.out.println("Load Project");
-                if (fileSelectionWindow != null) {
-                    fileSelectionWindow.dispose();
-                    fileSelectionWindow = new FileSelectionWindow("Load",
-                        FileSelectionWindow.WindowType.Load, window.GetSidePanel());
-                } else {
-                    fileSelectionWindow = new FileSelectionWindow("Load",
-                            FileSelectionWindow.WindowType.Load, window.GetSidePanel());
-                }
-            } else if (e.getComponent().equals(saveProjectButton)) {
-                System.out.println("Save Project");
-                if (fileSelectionWindow != null) {
-                    fileSelectionWindow.dispose();
-                    fileSelectionWindow = new FileSelectionWindow("Save",
-                            FileSelectionWindow.WindowType.Save, window.GetSidePanel());
-                } else {
-                    fileSelectionWindow = new FileSelectionWindow("Save",
-                            FileSelectionWindow.WindowType.Save, window.GetSidePanel());
-                }
-            }
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-            Object obj = e.getComponent();
-            if (obj instanceof JMenu) {
-                JMenu menu = (JMenu) e.getComponent();
-                menu.setSelected(true);
-            }
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-            Object obj = e.getComponent();
-            if (obj instanceof JMenu) {
-                JMenu menu = (JMenu) e.getComponent();
-                menu.setSelected(false);
-            }
-        }
-    };
-
+    public Point previousWindowLocation = new Point(0, 0);
+    private WindowFunctionsListener windowFunctionsListener = new WindowFunctionsListener(this);
     private Point offset;
     private MouseInputListener dragListener = new MouseInputListener() {
         @Override
@@ -129,8 +63,9 @@ public class WindowControlPanel extends JMenuBar {
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
         maximizedWindowSize = window.GetMaximumWindowSize();
-
         CreatePanelItems();
+        windowFunctionsListener = new WindowFunctionsListener(this);
+        AddWindowFunctionListeners();
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
 
@@ -215,11 +150,19 @@ public class WindowControlPanel extends JMenuBar {
         menu.setBackground(Color.DARK_GRAY);
     }
 
-    private void MaximizeWindow() {
+    public void MaximizeWindow() {
         previousWindowSize = window.getSize();
         previousWindowLocation = window.getLocation();
         window.setSize(maximizedWindowSize);
         window.setLocation(new Point(0, 0));
+    }
+
+    private void AddWindowFunctionListeners() {
+        saveProjectButton.addMouseListener(windowFunctionsListener);
+        loadProjectButton.addMouseListener(windowFunctionsListener);
+        minimizeButton.addMouseListener(windowFunctionsListener);
+        maximizeButton.addMouseListener(windowFunctionsListener);
+        exitButton.addMouseListener(windowFunctionsListener);
     }
 
 }
