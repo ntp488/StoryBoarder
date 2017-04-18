@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragListener.java" afterPath="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragAndResizeListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/storyboarder/gui/Panels/WindowControlPanel.java" afterPath="$PROJECT_DIR$/src/main/storyboarder/gui/Panels/WindowControlPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowFunctionsListener.java" afterPath="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowFunctionsListener.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,41 +53,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/Panels/WindowControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1837#1838#0" expanded="true" />
-                <element signature="e#1866#1867#0" expanded="true" />
+                <element signature="e#1634#1635#0" expanded="true" />
+                <element signature="e#1663#1664#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WindowDragListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowFunctionsListener.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WindowFunctionsListener.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowFunctionsListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+            <state relative-caret-position="100">
+              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WindowDragAndResizeListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragAndResizeListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,6 +181,7 @@
       <find>fileSe</find>
       <find>MaximizeW</find>
       <find>previ</find>
+      <find>Maximize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -236,6 +238,8 @@
         <option value="$PROJECT_DIR$/src/main/storyboarder/gui/Windows/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/main/storyboarder/gui/Panels/SidePanel.java" />
         <option value="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragListener.java" />
+        <option value="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragAndResizeListener.java" />
+        <option value="$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowFunctionsListener.java" />
         <option value="$PROJECT_DIR$/src/main/storyboarder/gui/Panels/WindowControlPanel.java" />
       </list>
     </option>
@@ -1044,7 +1048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492546261731</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Separated WindowDragListener from WindowControlPanel">
+      <created>1492546828999</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1492546828999</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1096,7 +1107,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean up" />
     <MESSAGE value="Working window controls" />
     <MESSAGE value="adds icon" />
     <MESSAGE value="changing layout" />
@@ -1121,7 +1131,8 @@
     <MESSAGE value="Removed some system outputs and comments." />
     <MESSAGE value="Moved window function listener to separate class." />
     <MESSAGE value="Reorganized project packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganized project packages" />
+    <MESSAGE value="Separated WindowDragListener from WindowControlPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated WindowDragListener from WindowControlPanel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1159,8 +1170,8 @@
           <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1449,36 +1460,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowFunctionsListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragAndResizeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        <state relative-caret-position="137">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowDragListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/Panels/WindowControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/components/WindowFunctionsListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

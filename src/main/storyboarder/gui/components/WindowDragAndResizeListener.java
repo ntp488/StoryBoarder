@@ -10,9 +10,10 @@ import java.awt.event.MouseEvent;
 /**
  * Created by Nathan on 4/18/2017.
  */
-public class WindowDragListener implements MouseInputListener{
+public class WindowDragAndResizeListener implements MouseInputListener{
     private Point offset;
-    public WindowDragListener() {
+    public WindowDragAndResizeListener(WindowControlPanel panel) {
+
     }
 
     @Override

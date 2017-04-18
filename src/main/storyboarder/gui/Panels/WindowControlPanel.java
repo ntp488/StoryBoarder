@@ -1,7 +1,7 @@
 package storyboarder.gui.Panels;
 
 import storyboarder.gui.Windows.MainWindow;
-import storyboarder.gui.components.WindowDragListener;
+import storyboarder.gui.components.WindowDragAndResizeListener;
 import storyboarder.gui.components.WindowFunctionsListener;
 
 import javax.swing.*;
@@ -14,19 +14,17 @@ public class WindowControlPanel extends JMenuBar {
     private JLabel logo;
     public JMenu fileMenu, editMenu, exitButton, maximizeButton, minimizeButton;
     public JMenuItem loadProjectButton, saveProjectButton;
-    private MainWindow window;
+    public MainWindow window;
     private BoxLayout layout;
-    public Dimension previousWindowSize = new Dimension(900, 450),
-            maximizedWindowSize;
-    public Point previousWindowLocation = new Point(0, 0);
-    private WindowFunctionsListener windowFunctionsListener = new WindowFunctionsListener(this);
-    private WindowDragListener dragListener = new WindowDragListener();
+    private WindowFunctionsListener windowFunctionsListener;
+    private WindowDragAndResizeListener dragListener;
 
     public WindowControlPanel(MainWindow mainWindow) {
         window = mainWindow;
-        maximizedWindowSize = window.GetMaximumWindowSize();
+
         CreatePanelItems();
         windowFunctionsListener = new WindowFunctionsListener(this);
+        dragListener = new WindowDragAndResizeListener(this);
         AddWindowFunctionListeners();
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
@@ -64,10 +62,8 @@ public class WindowControlPanel extends JMenuBar {
         DecorateMenu(fileMenu);
 
         loadProjectButton = new JMenuItem("Load");
-        loadProjectButton.addMouseListener(windowFunctionsListener);
 
         saveProjectButton = new JMenuItem("Save");
-        saveProjectButton.addMouseListener(windowFunctionsListener);
 
         fileMenu.add(loadProjectButton);
         fileMenu.add(saveProjectButton);
@@ -79,17 +75,14 @@ public class WindowControlPanel extends JMenuBar {
         minimizeButton = new JMenu();
         SetMenuIcon(minimizeButton, "minimizebutton.png");
         DecorateMenu(minimizeButton);
-        minimizeButton.addMouseListener(windowFunctionsListener);
 
         maximizeButton = new JMenu();
         SetMenuIcon(maximizeButton, "maximizebutton.png");
         DecorateMenu(maximizeButton);
-        maximizeButton.addMouseListener(windowFunctionsListener);
 
         exitButton = new JMenu();
         SetMenuIcon(exitButton, "exitbutton.png");
         DecorateMenu(exitButton);
-        exitButton.addMouseListener(windowFunctionsListener);
     }
 
     private void AddSeparator() {
@@ -110,13 +103,6 @@ public class WindowControlPanel extends JMenuBar {
     private void DecorateMenu(JMenu menu) {
         menu.setForeground(Color.white);
         menu.setBackground(Color.DARK_GRAY);
-    }
-
-    public void MaximizeWindow() {
-        previousWindowSize = window.getSize();
-        previousWindowLocation = window.getLocation();
-        window.setSize(maximizedWindowSize);
-        window.setLocation(new Point(0, 0));
     }
 
     private void AddWindowFunctionListeners() {

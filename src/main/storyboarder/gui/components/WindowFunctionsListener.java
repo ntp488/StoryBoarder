@@ -17,6 +17,9 @@ public class WindowFunctionsListener implements MouseListener {
     private JMenuItem saveProjectButton, loadProjectButton;
     private JFrame fileSelectionWindow;
     private WindowControlPanel controlPanel;
+    public Dimension previousWindowSize = new Dimension(900, 450),
+            maximizedWindowSize;
+    public Point previousWindowLocation = new Point(0, 0);
 
     public WindowFunctionsListener(WindowControlPanel panel) {
         controlPanel = panel;
@@ -25,6 +28,7 @@ public class WindowFunctionsListener implements MouseListener {
         minimizeButton = panel.minimizeButton;
         saveProjectButton = panel.saveProjectButton;
         loadProjectButton = panel.loadProjectButton;
+        maximizedWindowSize = panel.window.GetMaximumWindowSize();
     }
 
     @Override
@@ -34,10 +38,10 @@ public class WindowFunctionsListener implements MouseListener {
         } else if (e.getComponent().equals(maximizeButton)) {
             if (window.getSize().height != window.maximizedWindowSize.height ||
                     window.getSize().width != window.maximizedWindowSize.width) {
-                controlPanel.MaximizeWindow();
+                MaximizeWindow();
             } else {
-                window.setSize(controlPanel.previousWindowSize);
-                window.setLocation(controlPanel.previousWindowLocation);
+                window.setSize(previousWindowSize);
+                window.setLocation(previousWindowLocation);
             }
         } else if (e.getComponent().equals(minimizeButton)) {
             window.setState(Frame.ICONIFIED);
@@ -90,5 +94,12 @@ public class WindowFunctionsListener implements MouseListener {
             JMenu menu = (JMenu) e.getComponent();
             menu.setSelected(false);
         }
+    }
+
+    private void MaximizeWindow() {
+        previousWindowSize = window.getSize();
+        previousWindowLocation = window.getLocation();
+        window.setSize(maximizedWindowSize);
+        window.setLocation(new Point(0, 0));
     }
 }
