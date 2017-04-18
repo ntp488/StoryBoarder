@@ -84,7 +84,6 @@ public class FileSelectionWindow extends JFrame{
 
     private void LoadDeck(File file){
         if (file.exists()) {
-            //TODO: Create loading
             ReadFile(file);
             this.dispose();
         } else {
