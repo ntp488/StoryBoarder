@@ -4,15 +4,18 @@ package storyboarder;
  * Created by Nathan on 4/15/2017.
  */
 public class Card {
-    private Category category;
-    private String name, description;
+    //private Category category;
+    private String name;
+    private String description;
 
-    public void Card() {
-
+    public Card() {
+        name = "DefaultCardName";
+        description = "Default description.";
+        //category = new Category();
     }
 
     public void SetCategory(Category newCategory) {
-        category = newCategory;
+        //category = newCategory;
     }
 
     public void SetName(String newName){

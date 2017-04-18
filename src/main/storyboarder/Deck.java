@@ -12,9 +12,18 @@ public class Deck {
     public Deck() {
         name = "DefaultName";
         categories = new ArrayList<>();
-        categories.add(new Category("Person"));//person
-        categories.add(new Category("Place"));//place
-        categories.add(new Category("Thing"));//thing
+        Category people = new Category("Person");
+        people.AddProperty(new Property());
+        people.AddCard(new Card());
+        Category places = new Category("Place");
+        places.AddCard(new Card());
+        places.AddProperty(new Property());
+        Category things = new Category("Things");
+        things.AddCard(new Card());
+        things.AddProperty(new Property());
+        categories.add(people);//person
+        categories.add(places);//place
+        categories.add(things);//thing
     }
 
     public String GetName() {

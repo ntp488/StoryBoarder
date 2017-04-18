@@ -11,7 +11,7 @@ public class CardCreationTest {
 
     @BeforeEach
     private void Setup() {
-        manuallyCreatedCard = new Card();
+        //manuallyCreatedCard = new Card();
         //manuallyCreatedCard.SetCategory();
         //manuallyCreatedCard.SetName();
         //manuallyCreatedCard.SetDescription();

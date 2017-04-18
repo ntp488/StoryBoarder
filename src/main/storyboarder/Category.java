@@ -6,9 +6,9 @@ import java.util.ArrayList;
  * Created by Nathan on 4/15/2017.
  */
 public class Category {
+    private String name;
     private ArrayList<Property> properties;
     private ArrayList<Card> cards;
-    private String name;
 
     public Category(String categoryName){
         name = categoryName;

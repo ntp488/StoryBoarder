@@ -11,7 +11,7 @@ public class Property {
     }
 
     public Property() {
-
+        name = "DefaultPropertyName";
     }
 
     @Override
