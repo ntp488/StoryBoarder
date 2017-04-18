@@ -8,17 +8,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Card {
     private String name;
     private String description;
-    @JsonIgnore
-    private Category category;
+    private String category;
 
-    public Card(Category newCategory) {
+    public Card(String categoryName) {
         name = "DefaultCardName";
         description = "Default description.";
-        category = newCategory;
+        category = categoryName;
     }
 
     public void SetCategory(Category newCategory) {
-        category = newCategory;
+        //category = newCategory;
     }
 
     public void SetName(String newName){

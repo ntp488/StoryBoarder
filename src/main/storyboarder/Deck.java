@@ -14,14 +14,14 @@ public class Deck {
         categories = new ArrayList<>();
         Category people = new Category("Person");
         people.AddProperty(new Property());
-        Card person = new Card(people);
+        Card person = new Card(people.GetName());
         people.AddCard(person);
         Category places = new Category("Place");
-        Card place = new Card(places);
+        Card place = new Card(places.GetName());
         places.AddCard(place);
         places.AddProperty(new Property());
         Category things = new Category("Things");
-        Card thing = new Card(things);
+        Card thing = new Card(things.GetName());
         things.AddCard(thing);
         things.AddProperty(new Property());
         categories.add(people);//person

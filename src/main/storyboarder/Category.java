@@ -50,6 +50,10 @@ public class Category {
         cards.remove(cardToRemove);
     }
 
+    public String GetName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         String categoryAsString;
