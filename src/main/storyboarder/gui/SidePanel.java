@@ -25,6 +25,7 @@ public class SidePanel extends JPanel{
     private Deck deck;
 
     public SidePanel(){
+        deck = new Deck();
         CreatePanelItems();
 
         layout = new BoxLayout(this, BoxLayout.Y_AXIS);
@@ -131,4 +132,7 @@ public class SidePanel extends JPanel{
         deck = loadedDeck;
     }
 
+    public Deck GetCurrentDeck() {
+        return deck;
+    }
 }

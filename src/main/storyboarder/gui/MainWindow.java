@@ -3,6 +3,8 @@ package storyboarder.gui;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+
+import storyboarder.Deck;
 import storyboarder.gui.components.ComponentResizer;
 
 /**
@@ -20,8 +22,10 @@ public class MainWindow extends JFrame {
     private Dimension maximizedWindowSize
         = new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,
         Toolkit.getDefaultToolkit().getScreenSize().height - taskbarheight);
+    public static MainWindow window;
 
     public MainWindow() {
+        window = this;
         InitializeWindowItems();
 
         this.setLayout(layout);
@@ -83,5 +87,9 @@ public class MainWindow extends JFrame {
         sidePanel = new SidePanel();
         mainPanel = new MainPanel();
         controlPanel = new WindowControlPanel(this);
+    }
+
+    public SidePanel GetSidePanel() {
+        return sidePanel;
     }
 }

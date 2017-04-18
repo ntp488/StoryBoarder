@@ -1,7 +1,9 @@
 package storyboarder.gui;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import storyboarder.gui.components.SimpleMenuBar;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,6 +23,7 @@ public class FileSelectionWindow extends JFrame{
         Save, Load
     }
     private WindowType type;
+    private SidePanel sidePanel;
 
     private ActionListener fileChooserListener = new ActionListener() {
         @Override
@@ -48,7 +51,8 @@ public class FileSelectionWindow extends JFrame{
         }
     };
 
-    public FileSelectionWindow(String buttonText, WindowType windowType) {
+    public FileSelectionWindow(String buttonText, WindowType windowType, SidePanel currentSidePanel) {
+        sidePanel = currentSidePanel;
         CreateWindowItems();
         type = windowType;
         this.setLayout(layout);
@@ -104,6 +108,9 @@ public class FileSelectionWindow extends JFrame{
             System.out.println("I should perform saving here.");
             try {
                 file.createNewFile();
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+                mapper.writeValue(file, sidePanel.GetCurrentDeck());
             } catch (IOException e) {
                 e.printStackTrace();
             }

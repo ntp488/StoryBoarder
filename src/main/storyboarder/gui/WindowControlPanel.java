@@ -16,7 +16,6 @@ public class WindowControlPanel extends JMenuBar {
     private MainWindow window;
     private BoxLayout layout;
     private JFrame fileSelectionWindow;
-
     private Dimension previousWindowSize = new Dimension(900, 450),
             maximizedWindowSize;
     private Point previousWindowLocation = new Point(0, 0);
@@ -45,20 +44,20 @@ public class WindowControlPanel extends JMenuBar {
                 if (fileSelectionWindow != null) {
                     fileSelectionWindow.dispose();
                     fileSelectionWindow = new FileSelectionWindow("Load",
-                        FileSelectionWindow.WindowType.Load);
+                        FileSelectionWindow.WindowType.Load, window.GetSidePanel());
                 } else {
                     fileSelectionWindow = new FileSelectionWindow("Load",
-                            FileSelectionWindow.WindowType.Load);
+                            FileSelectionWindow.WindowType.Load, window.GetSidePanel());
                 }
             } else if (e.getComponent().equals(saveProjectButton)) {
                 System.out.println("Save Project");
                 if (fileSelectionWindow != null) {
                     fileSelectionWindow.dispose();
                     fileSelectionWindow = new FileSelectionWindow("Save",
-                            FileSelectionWindow.WindowType.Save);
+                            FileSelectionWindow.WindowType.Save, window.GetSidePanel());
                 } else {
                     fileSelectionWindow = new FileSelectionWindow("Save",
-                            FileSelectionWindow.WindowType.Save);
+                            FileSelectionWindow.WindowType.Save, window.GetSidePanel());
                 }
             }
         }
