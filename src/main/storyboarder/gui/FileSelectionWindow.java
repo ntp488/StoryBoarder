@@ -81,6 +81,7 @@ public class FileSelectionWindow extends JFrame{
 
     private void LoadDeck(File file){
         if (file.exists() && file.isDirectory()) {
+            //TODO: Create loading
             System.out.println("I should perform loading here.");
         } else {
             //TODO: Create handling for when no file exists with the chosen name
@@ -106,7 +107,6 @@ public class FileSelectionWindow extends JFrame{
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            System.out.println(file.getAbsolutePath());
         }
         this.dispose();
     }
