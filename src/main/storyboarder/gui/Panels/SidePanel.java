@@ -3,8 +3,7 @@ package storyboarder.gui.Panels;
 import storyboarder.Deck;
 import storyboarder.cardCreation.CardCreationWindow;
 import storyboarder.categoryCreation.CategoryCreationWindow;
-import storyboarder.gui.components.SimpleDarkButton;
-import storyboarder.gui.components.CustomTreeCellRenderer;
+import storyboarder.gui.components.*;
 
 import javax.swing.*;
 import javax.swing.tree.*;

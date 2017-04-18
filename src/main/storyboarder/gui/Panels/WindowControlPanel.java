@@ -1,8 +1,7 @@
 package storyboarder.gui.Panels;
 
 import storyboarder.gui.Windows.MainWindow;
-import storyboarder.gui.components.WindowDragAndResizeListener;
-import storyboarder.gui.components.WindowFunctionsListener;
+import storyboarder.gui.components.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,6 +70,7 @@ public class WindowControlPanel extends JMenuBar {
         //CREATING EDIT MENU -------------------------------------------------
         editMenu = new JMenu("Edit");
         DecorateMenu(editMenu);
+
         //CREATING WINDOW FUNCTION BUTTONS -----------------------------------
         minimizeButton = new JMenu();
         SetMenuIcon(minimizeButton, "minimizebutton.png");

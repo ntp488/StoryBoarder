@@ -4,9 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-import storyboarder.gui.Panels.MainPanel;
-import storyboarder.gui.Panels.SidePanel;
-import storyboarder.gui.Panels.WindowControlPanel;
+import storyboarder.gui.Panels.*;
 import storyboarder.gui.components.ComponentResizer;
 
 /**

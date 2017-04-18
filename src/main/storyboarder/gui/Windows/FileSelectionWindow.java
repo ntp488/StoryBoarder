@@ -1,16 +1,13 @@
 package storyboarder.gui.Windows;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import storyboarder.gui.Panels.SidePanel;
 import storyboarder.gui.components.SimpleMenuBar;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
+import java.awt.event.*;
+import java.io.*;
 
 /**
  * Created by Nathan on 4/15/2017.
