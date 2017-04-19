@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="062e9fc3-b0be-44a0-82b3-893defcf55e7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/storyboarder/Card.java" afterPath="$PROJECT_DIR$/src/main/storyboarder/Card.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/storyboarder/Category.java" afterPath="$PROJECT_DIR$/src/main/storyboarder/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/storyboarder/Deck.java" afterPath="$PROJECT_DIR$/src/main/storyboarder/Deck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,16 +37,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WindowControlPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/Panels/WindowControlPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/storyboarder/gui/Panels/MainPanel.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Card.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/storyboarder/Card.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -107,6 +95,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,6 +245,7 @@
         <option value="$PROJECT_DIR$/../../bloop.json" />
         <option value="$PROJECT_DIR$/src/main/storyboarder/Category.java" />
         <option value="$PROJECT_DIR$/src/main/storyboarder/Card.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       </list>
     </option>
   </component>
@@ -433,6 +432,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoryBoarder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -591,7 +608,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jackson-databind-2.8.8.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -1157,7 +1174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492619567950</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fixed infinite recursion error when attempting to load objects with biderectional relationships.">
+      <created>1492623643028</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1492623643028</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1241,7 +1265,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Working JMenuItems" />
     <MESSAGE value="Better side panel, adds more buttons" />
     <MESSAGE value="Cleaned a lot, added helper functions, replaced icons" />
     <MESSAGE value="Fixed separator code" />
@@ -1266,7 +1289,8 @@
     <MESSAGE value="Semi-Functional loading and saving." />
     <MESSAGE value="Tinkering with loading and saving" />
     <MESSAGE value="Added Jackson annotations to load using correct constructors." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Jackson annotations to load using correct constructors." />
+    <MESSAGE value="Fixed infinite recursion error when attempting to load objects with biderectional relationships." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed infinite recursion error when attempting to load objects with biderectional relationships." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1344,13 +1368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1625,6 +1642,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1689,6 +1714,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
