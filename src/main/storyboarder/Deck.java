@@ -9,44 +9,28 @@ public class Deck {
     private String name;
     private ArrayList<Category> categories;
 
+    //TODO: move default deck creation to test class
     public Deck() {
         name = "DefaultName";
         categories = new ArrayList<>();
         Category people = new Category("Person");
-        people.AddProperty(new Property());
-        Card person = new Card(people.GetName());
+        people.AddProperty(new Property("Health", Property.PropertyType.Number));
+        Card person = new Card("Zack", "A real jerk..", people.GetName());
         people.AddCard(person);
+
         Category places = new Category("Place");
-        Card place = new Card(places.GetName());
+        places.AddProperty(new Property("Zipcode", Property.PropertyType.Number));
+        Card place = new Card("Wall-mart", "Where you go for all the things.", places.GetName());
         places.AddCard(place);
-        places.AddProperty(new Property());
+
         Category things = new Category("Things");
-        Card thing = new Card(things.GetName());
+        things.AddProperty(new Property("Weight", Property.PropertyType.Number));
+        Card thing = new Card("Rock", "Really more like a pebble.", things.GetName());
         things.AddCard(thing);
-        things.AddProperty(new Property());
+
         categories.add(people);//person
         categories.add(places);//place
         categories.add(things);//thing
-    }
-
-    public String GetName() {
-        return name;
-    }
-
-    public void SetCategories(ArrayList<Category> categoriesList) {
-        categories = categoriesList;
-    }
-
-    public ArrayList<Category> GetCategories() {
-        return categories;
-    }
-
-    public void AddCategory(Category newCategory) {
-        categories.add(newCategory);
-    }
-
-    public void RemoveCategory(Category categoryToRemove) {
-        categories.remove(categoryToRemove);
     }
 
     @Override
