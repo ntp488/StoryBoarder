@@ -15,17 +15,17 @@ public class Deck {
         categories = new ArrayList<>();
         Category people = new Category("Person");
         people.AddProperty(new Property("Health", Property.PropertyType.Number));
-        Card person = new Card("Zack", "A real jerk..", people.GetName());
+        Card person = new Card("Zack", "A real jerk..", people);
         people.AddCard(person);
 
         Category places = new Category("Place");
         places.AddProperty(new Property("Zipcode", Property.PropertyType.Number));
-        Card place = new Card("Wall-mart", "Where you go for all the things.", places.GetName());
+        Card place = new Card("Wall-mart", "Where you go for all the things.", places);
         places.AddCard(place);
 
         Category things = new Category("Things");
         things.AddProperty(new Property("Weight", Property.PropertyType.Number));
-        Card thing = new Card("Rock", "Really more like a pebble.", things.GetName());
+        Card thing = new Card("Rock", "Really more like a pebble.", things);
         things.AddCard(thing);
 
         categories.add(people);//person

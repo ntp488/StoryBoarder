@@ -1,10 +1,9 @@
 package storyboarder;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 
@@ -12,11 +11,16 @@ import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
  * Created by Nathan on 4/15/2017.
  */
 @JsonAutoDetect(creatorVisibility = ANY, fieldVisibility = ANY)
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Category {
+    private int id = new Random().nextInt(2147483646);
     private String name;
     private ArrayList<Property> properties;
     private ArrayList<Card> cards;
 
+    //TODO: create better method of assigning ID property to ensure no duplicates.
     @JsonCreator
     public Category(@JsonProperty("name") String categoryName){
         name = categoryName;
