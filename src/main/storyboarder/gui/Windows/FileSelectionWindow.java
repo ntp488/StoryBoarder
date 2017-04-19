@@ -85,7 +85,6 @@ public class FileSelectionWindow extends JFrame{
     private void LoadDeck(File file){
         if (file.exists()) {
             ReadFile(file);
-            this.dispose();
         } else {
             System.out.println("You chose a file that doesn't exist.");
             JOptionPane optionPane = new JOptionPane();
@@ -93,6 +92,7 @@ public class FileSelectionWindow extends JFrame{
         "You have chosen a file that doesn't exist.", "Failed to Load",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE);
         }
+        this.dispose();
     }
 
     private void ReadFile(File file) {
@@ -103,6 +103,8 @@ public class FileSelectionWindow extends JFrame{
             System.out.println(loadedDeck.toString());
         } catch (IOException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e.toString(), "Error Loading",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -141,6 +143,8 @@ public class FileSelectionWindow extends JFrame{
             mapper.writeValue(file, sidePanel.GetCurrentDeck());
         } catch (IOException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e.toString(), "Error Saving",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 

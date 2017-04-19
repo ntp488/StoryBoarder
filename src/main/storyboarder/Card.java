@@ -22,7 +22,6 @@ public class Card {
     @JsonCreator
     public Card(@JsonProperty("name") String newName,
                 @JsonProperty("description") String newDescription,
-                //@JsonProperty("category") String categoryName) {
                 @JsonProperty("category") Category newCategory) {
         name = newName;
         description = newDescription;
