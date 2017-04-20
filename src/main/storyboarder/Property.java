@@ -6,9 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 
-/**
- * Created by Nathan on 4/17/2017.
- */
 @JsonAutoDetect(creatorVisibility = ANY, fieldVisibility = ANY)
 public class Property {
     private String name;

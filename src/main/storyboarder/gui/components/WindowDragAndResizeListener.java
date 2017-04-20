@@ -2,14 +2,10 @@ package storyboarder.gui.components;
 
 import storyboarder.gui.Panels.WindowControlPanel;
 import storyboarder.gui.Windows.MainWindow;
-
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
-/**
- * Created by Nathan on 4/18/2017.
- */
 public class WindowDragAndResizeListener implements MouseInputListener{
     private Point offset;
     public WindowDragAndResizeListener(WindowControlPanel panel) {

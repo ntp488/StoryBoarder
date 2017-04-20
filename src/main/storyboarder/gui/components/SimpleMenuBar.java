@@ -6,9 +6,6 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-/**
- * Created by ntp48 on 4/14/2017.
- */
 public class SimpleMenuBar extends JMenuBar{
     private JLabel logo, name;
     private JMenu exitButton, minimizeButton;

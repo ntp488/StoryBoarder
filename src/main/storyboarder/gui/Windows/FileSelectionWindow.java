@@ -10,9 +10,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 
-/**
- * Created by Nathan on 4/15/2017.
- */
 public class FileSelectionWindow extends JFrame{
     private SimpleMenuBar simpleMenuBar;
     private GridBagLayout layout;

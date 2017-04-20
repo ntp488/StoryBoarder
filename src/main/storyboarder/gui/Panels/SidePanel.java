@@ -10,9 +10,6 @@ import javax.swing.tree.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * Created by Nathan on 1/23/2017.
- */
 public class SidePanel extends JPanel{
     private JButton createCharacterButton, createCategoryButton;
     private JScrollPane scrollPane;

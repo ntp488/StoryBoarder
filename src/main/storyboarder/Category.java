@@ -6,9 +6,6 @@ import java.util.ArrayList;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 
-/**
- * Created by Nathan on 4/15/2017.
- */
 @JsonAutoDetect(creatorVisibility = ANY, fieldVisibility = ANY)
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,

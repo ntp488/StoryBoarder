@@ -3,9 +3,6 @@ package storyboarder.gui.components;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by Nathan on 1/23/2017.
- */
 public class SimpleDarkButton extends JButton {
     private ImageIcon icon, iconRollover, iconDown;
     private Image img, newimg, imgRollover, newimgRollover, imgDown, newImgDown;

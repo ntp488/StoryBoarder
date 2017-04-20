@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import storyboarder.gui.Panels.*;
 import storyboarder.gui.components.ComponentResizer;
 
-/**
- * Created by Nathan on 1/23/2017.
- */
 public class MainWindow extends JFrame {
     private GridBagLayout layout;
     private GridBagConstraints constraints;

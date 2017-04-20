@@ -6,9 +6,6 @@ import storyboarder.gui.components.*;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by Nathan on 1/24/2017.
- */
 public class WindowControlPanel extends JMenuBar {
     private JLabel logo;
     public JMenu fileMenu, editMenu, exitButton, maximizeButton, minimizeButton;

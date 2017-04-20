@@ -5,9 +5,6 @@ import storyboarder.gui.components.SimpleMenuBar;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by Nathan on 4/15/2017.
- */
 public class CategoryCreationWindow extends JFrame {
         private SimpleMenuBar simpleMenuBar;
         private GridBagLayout layout;

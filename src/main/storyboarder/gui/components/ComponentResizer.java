@@ -6,10 +6,6 @@ import java.util.*;
 import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 
-/**
- *  The ComponentResizer allows you to resize a component by dragging a border
- *  of the component.
- */
 public class ComponentResizer extends MouseAdapter
 {
     private final static Dimension MINIMUM_SIZE = new Dimension(10, 10);
@@ -46,10 +42,6 @@ public class ComponentResizer extends MouseAdapter
     private Dimension minimumSize = MINIMUM_SIZE;
     private Dimension maximumSize = MAXIMUM_SIZE;
 
-    /**
-     *  Convenience contructor. All borders are resizable in increments of
-     *  a single pixel. Components must be registered separately.
-     */
     public ComponentResizer()
     {
         this(new Insets(5, 5, 5, 5), new Dimension(1, 1));

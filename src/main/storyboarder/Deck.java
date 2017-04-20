@@ -3,9 +3,6 @@ package storyboarder;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created by Nathan on 4/17/2017.
- */
 public class Deck {
     private String name;
     private ArrayList<Category> categories;

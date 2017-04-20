@@ -4,9 +4,6 @@ import javax.swing.*;
 import javax.swing.tree.*;
 import java.awt.*;
 
-/**
- * Created by ntp48 on 4/16/2017.
- */
 public class CustomTreeCellRenderer extends DefaultTreeCellRenderer {
 
     @Override
