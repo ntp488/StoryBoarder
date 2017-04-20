@@ -12,13 +12,11 @@ public class WindowFunctionsListener implements MouseListener {
     private JMenu exitButton, maximizeButton, minimizeButton;
     private JMenuItem saveProjectButton, loadProjectButton;
     private JFrame fileSelectionWindow;
-    private WindowControlPanel controlPanel;
     public Dimension previousWindowSize = new Dimension(900, 450),
             maximizedWindowSize;
     public Point previousWindowLocation = new Point(0, 0);
 
     public WindowFunctionsListener(WindowControlPanel panel) {
-        controlPanel = panel;
         exitButton = panel.exitButton;
         maximizeButton = panel.maximizeButton;
         minimizeButton = panel.minimizeButton;
@@ -51,20 +49,20 @@ public class WindowFunctionsListener implements MouseListener {
             if (fileSelectionWindow != null) {
                 fileSelectionWindow.dispose();
                 fileSelectionWindow = new FileSelectionWindow("Load",
-                        FileSelectionWindow.WindowType.Load, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Load, window.GetSidePanel());
             } else {
                 fileSelectionWindow = new FileSelectionWindow("Load",
-                        FileSelectionWindow.WindowType.Load, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Load, window.GetSidePanel());
             }
         } else if (e.getComponent().equals(saveProjectButton)) {
             System.out.println("Save Project");
             if (fileSelectionWindow != null) {
                 fileSelectionWindow.dispose();
                 fileSelectionWindow = new FileSelectionWindow("Save",
-                        FileSelectionWindow.WindowType.Save, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Save, window.GetSidePanel());
             } else {
                 fileSelectionWindow = new FileSelectionWindow("Save",
-                        FileSelectionWindow.WindowType.Save, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Save, window.GetSidePanel());
             }
         }
     }

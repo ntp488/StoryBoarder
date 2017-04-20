@@ -6,6 +6,7 @@ import storyboarder.Deck;
 import storyboarder.gui.Panels.SidePanel;
 import storyboarder.gui.components.SimpleMenuBar;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -50,7 +51,7 @@ public class FileSelectionWindow extends JFrame{
         this.setLayout(layout);
         this.setJMenuBar(simpleMenuBar);
         fileChooser.setApproveButtonText(buttonText);
-        //TODO: Decide on a file extension to use and set the filter appropriately
+        fileChooser.setFileFilter(new FileNameExtensionFilter(".json","json"));
         fileChooser.addActionListener(fileChooserListener);
         this.add(fileChooser);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -58,8 +59,8 @@ public class FileSelectionWindow extends JFrame{
         BorderFactory.createLineBorder(Color.black);
         this.setMinimumSize(new Dimension(500, 450));
         Point middleOfScreen = new Point(
-                Toolkit.getDefaultToolkit().getScreenSize().width/2 - 250,
-                Toolkit.getDefaultToolkit().getScreenSize().height/2 - 225
+        Toolkit.getDefaultToolkit().getScreenSize().width/2 - 250,
+        Toolkit.getDefaultToolkit().getScreenSize().height/2 - 225
         );
         this.setLocation(middleOfScreen);
 
@@ -75,10 +76,13 @@ public class FileSelectionWindow extends JFrame{
         fileChooser = new JFileChooser();
     }
 
-    private void LoadDeck(File file){
+    private void LoadDeck(File file) {
         if (file.exists()) {
             ReadFile(file);
-        } else {
+        } else if (new File(file.getAbsolutePath() + ".json").exists()) {
+            file = new File(file.getAbsolutePath() + ".json");
+            ReadFile(file);
+        }else {
             System.out.println("You chose a file that doesn't exist.");
             JOptionPane optionPane = new JOptionPane();
             optionPane.showConfirmDialog(this,
