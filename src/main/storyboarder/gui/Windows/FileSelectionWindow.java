@@ -147,5 +147,4 @@ public class FileSelectionWindow extends JFrame{
                     JOptionPane.ERROR_MESSAGE);
         }
     }
-
 }
