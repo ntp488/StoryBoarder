@@ -39,10 +39,6 @@ public class FileSelectionWindow extends JFrame{
                     case Load:
                         LoadDeck(selectedFile);
                         break;
-                    default:
-                        //TODO: throw new custom exception
-                        System.out.println("No set type for file selection window");
-                        break;
                 }
             }  else if (command.equals(JFileChooser.CANCEL_SELECTION)) {
                 dispose();
