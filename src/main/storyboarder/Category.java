@@ -15,12 +15,11 @@ import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
 public class Category {
-    private int id = new Random().nextInt(2147483646);
+    private int id = Deck.GenerateID();
     private String name;
     private ArrayList<Property> properties;
     private ArrayList<Card> cards;
 
-    //TODO: create better method of assigning ID property to ensure no duplicates.
     @JsonCreator
     public Category(@JsonProperty("name") String categoryName){
         name = categoryName;
@@ -47,7 +46,7 @@ public class Category {
     @Override
     public String toString() {
         String categoryAsString;
-        categoryAsString = "Category: " + name + "\n";
+        categoryAsString = "Category: " + name + "\n" + "ID: " + id + "\n";
         categoryAsString += "   Properties: \n";
         for (Property prop : properties) {
             categoryAsString += "       " + prop.toString() + "\n";

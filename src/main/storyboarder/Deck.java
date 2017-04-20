@@ -1,6 +1,7 @@
 package storyboarder;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by Nathan on 4/17/2017.
@@ -8,11 +9,14 @@ import java.util.ArrayList;
 public class Deck {
     private String name;
     private ArrayList<Category> categories;
+    private static ArrayList ids;
+    private static Random random = new Random();
 
     //TODO: move default deck creation to test class
     public Deck() {
         name = "DefaultName";
         categories = new ArrayList<>();
+        ids = new ArrayList();
         Category people = new Category("Person");
         people.AddProperty(new Property("Health", Property.PropertyType.Number));
         Card person = new Card("Zack", "A real jerk..", people);
@@ -41,6 +45,14 @@ public class Deck {
             deckAsString += cat.toString();
         }
         return deckAsString;
+    }
+
+    public static int GenerateID() {
+        int temp = random.nextInt(2147483646);
+        while (ids.contains(temp)) {
+            temp = random.nextInt(2147483646);
+        }
+        return temp;
     }
 
 }
