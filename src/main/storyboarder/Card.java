@@ -1,7 +1,6 @@
 package storyboarder;
 
 import com.fasterxml.jackson.annotation.*;
-import java.util.Random;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 
