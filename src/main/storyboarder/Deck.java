@@ -8,7 +8,6 @@ public class Deck {
     private ArrayList<Category> categories;
     private static ArrayList ids;
     private static Random random = new Random();
-    private boolean hasChanged;
 
     //TODO: move default deck creation to test class
     public Deck() {
