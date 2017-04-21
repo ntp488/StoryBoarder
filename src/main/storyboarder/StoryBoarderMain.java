@@ -5,6 +5,9 @@ import javax.swing.*;
 
 public class StoryBoarderMain {
     public static void main(String[] Args) {
-        JFrame mainWindow = new MainWindow();
+        MainWindow mainWindow = new MainWindow();
+        if (mainWindow.getSidePanel().checkForDeckChange()) {
+            mainWindow.getSidePanel().reloadDeckHierarchy();
+        }
     }
 }

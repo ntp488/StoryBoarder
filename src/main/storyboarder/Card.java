@@ -25,7 +25,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "--Name: " + getName() + " --ID: " + id + " --Description: " + description + " --Category: " + category.getName();
+        return "--Name: " + name + " --ID: " + id + " --Description: " + description + " --Category: " + category.getName();
     }
 
     public String getName() {

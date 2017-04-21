@@ -26,7 +26,7 @@ public class Category {
     }
 
     public void addCard(Card newCard) {
-        getCards().add(newCard);
+        cards.add(newCard);
     }
 
     public String getName() {
@@ -46,8 +46,8 @@ public class Category {
             categoryAsString += "       " + prop.toString() + "\n";
         }
         categoryAsString += "   Cards: \n";
-        if (getCards() != null) {
-            for (Card card : getCards()) {
+        if (cards != null) {
+            for (Card card : cards) {
                 categoryAsString += "       " + card.toString() + "\n";
             }
         }

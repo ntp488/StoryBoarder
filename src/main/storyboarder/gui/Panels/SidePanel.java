@@ -77,10 +77,10 @@ public class SidePanel extends JPanel{
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        initializeDeckHierarchy();
+        reloadDeckHierarchy();
     }
 
-    private void initializeDeckHierarchy() {
+    public void reloadDeckHierarchy() {
         DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(deck.getName());
         DefaultTreeModel treeModel = new DefaultTreeModel(rootNode);
         DefaultTreeCellRenderer customCellRenderer = new CustomTreeCellRenderer();
@@ -112,12 +112,16 @@ public class SidePanel extends JPanel{
         scrollPane.getViewport().add(hierarchy);
     }
 
-    public void loadDeckHierarchy(Deck loadedDeck) {
+    public void loadNewDeck(Deck loadedDeck) {
         deck = loadedDeck;
-        initializeDeckHierarchy();
+        reloadDeckHierarchy();
     }
 
     public Deck getCurrentDeck() {
         return deck;
+    }
+
+    public boolean checkForDeckChange() {
+        return deck.detectChange();
     }
 }

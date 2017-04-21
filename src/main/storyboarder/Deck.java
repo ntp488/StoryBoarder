@@ -8,6 +8,7 @@ public class Deck {
     private ArrayList<Category> categories;
     private static ArrayList ids;
     private static Random random = new Random();
+    private boolean hasChanged;
 
     //TODO: move default deck creation to test class
     public Deck() {
@@ -29,16 +30,16 @@ public class Deck {
         Card thing = new Card("Rock", "Really more like a pebble.", things);
         things.addCard(thing);
 
-        getCategories().add(people);//person
-        getCategories().add(places);//place
-        getCategories().add(things);//thing
+        categories.add(people);//person
+        categories.add(places);//place
+        categories.add(things);//thing
     }
 
     @Override
     public String toString() {
         String deckAsString;
-        deckAsString = "Deck: " + getName() + "\n";
-        for (Category cat : getCategories()) {
+        deckAsString = "Deck: " + name + "\n";
+        for (Category cat : categories) {
             deckAsString += cat.toString();
         }
         return deckAsString;
@@ -66,5 +67,13 @@ public class Deck {
 
     public void setCategories(ArrayList<Category> categories) {
         this.categories = categories;
+    }
+
+    public boolean detectChange() {
+        return hasChanged;
+    }
+
+    public void alertDeckToChange() {
+        hasChanged = true;
     }
 }
