@@ -11,8 +11,8 @@ public class Deck {
 
     //TODO: move default deck creation to test class
     public Deck() {
-        name = "DefaultName";
-        categories = new ArrayList<>();
+        SetName("DefaultName");
+        SetCategories(new ArrayList<>());
         ids = new ArrayList();
         Category people = new Category("Person");
         people.AddProperty(new Property("Health", Property.PropertyType.Number));
@@ -29,16 +29,16 @@ public class Deck {
         Card thing = new Card("Rock", "Really more like a pebble.", things);
         things.AddCard(thing);
 
-        categories.add(people);//person
-        categories.add(places);//place
-        categories.add(things);//thing
+        GetCategories().add(people);//person
+        GetCategories().add(places);//place
+        GetCategories().add(things);//thing
     }
 
     @Override
     public String toString() {
         String deckAsString;
-        deckAsString = "Deck: " + name + "\n";
-        for (Category cat : categories) {
+        deckAsString = "Deck: " + GetName() + "\n";
+        for (Category cat : GetCategories()) {
             deckAsString += cat.toString();
         }
         return deckAsString;
@@ -52,4 +52,19 @@ public class Deck {
         return temp;
     }
 
+    public String GetName() {
+        return name;
+    }
+
+    public void SetName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Category> GetCategories() {
+        return categories;
+    }
+
+    public void SetCategories(ArrayList<Category> categories) {
+        this.categories = categories;
+    }
 }

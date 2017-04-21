@@ -20,7 +20,7 @@ public class Category {
     public Category(@JsonProperty("name") String categoryName){
         name = categoryName;
         properties = new ArrayList<>();
-        cards = new ArrayList<>();
+        SetCards(new ArrayList<>());
     }
 
     public void AddProperty(Property property) {
@@ -28,7 +28,7 @@ public class Category {
     }
 
     public void AddCard(Card newCard) {
-        cards.add(newCard);
+        GetCards().add(newCard);
     }
 
     public String GetName() {
@@ -48,11 +48,19 @@ public class Category {
             categoryAsString += "       " + prop.toString() + "\n";
         }
         categoryAsString += "   Cards: \n";
-        if (cards != null) {
-            for (Card card : cards) {
+        if (GetCards() != null) {
+            for (Card card : GetCards()) {
                 categoryAsString += "       " + card.toString() + "\n";
             }
         }
         return categoryAsString;
+    }
+
+    public ArrayList<Card> GetCards() {
+        return cards;
+    }
+
+    public void SetCards(ArrayList<Card> cards) {
+        this.cards = cards;
     }
 }

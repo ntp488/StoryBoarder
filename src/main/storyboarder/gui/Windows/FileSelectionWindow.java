@@ -97,6 +97,7 @@ public class FileSelectionWindow extends JFrame{
             ObjectMapper mapper = new ObjectMapper();
             mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
             Deck loadedDeck = mapper.readValue(file, Deck.class);
+            sidePanel.LoadDeckHierarchy(loadedDeck);
             System.out.println(loadedDeck.toString());
         } catch (IOException e) {
             e.printStackTrace();

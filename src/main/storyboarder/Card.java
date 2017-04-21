@@ -18,13 +18,21 @@ public class Card {
     public Card(@JsonProperty("name") String newName,
                 @JsonProperty("description") String newDescription,
                 @JsonProperty("category") Category newCategory) {
-        name = newName;
+        SetName(newName);
         description = newDescription;
         category = newCategory;
     }
 
     @Override
     public String toString() {
-        return "--Name: " + name + " --ID: " + id + " --Description: " + description + " --Category: " + category.GetName();
+        return "--Name: " + GetName() + " --ID: " + id + " --Description: " + description + " --Category: " + category.GetName();
+    }
+
+    public String GetName() {
+        return name;
+    }
+
+    public void SetName(String name) {
+        this.name = name;
     }
 }

@@ -1,10 +1,11 @@
 package storyboarder.gui.Panels;
 
+import storyboarder.Card;
+import storyboarder.Category;
 import storyboarder.Deck;
 import storyboarder.cardCreation.CardCreationWindow;
 import storyboarder.categoryCreation.CategoryCreationWindow;
 import storyboarder.gui.components.*;
-
 import javax.swing.*;
 import javax.swing.tree.*;
 import java.awt.*;
@@ -76,22 +77,19 @@ public class SidePanel extends JPanel{
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        CreateEmptyDeckHierarchy();
-
-        scrollPane.getViewport().add(hierarchy);
+        InitializeDeckHierarchy();
     }
 
-    private void CreateEmptyDeckHierarchy() {
-        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode("The Java Series");
+    private void InitializeDeckHierarchy() {
+        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(deck.GetName());
         DefaultTreeModel treeModel = new DefaultTreeModel(rootNode);
-        DefaultTreeCellRenderer customCellRenderer;
+        DefaultTreeCellRenderer customCellRenderer = new CustomTreeCellRenderer();
 
         hierarchy = new JTree(treeModel);
         hierarchy.setBackground(Color.LIGHT_GRAY);
         hierarchy.setEditable(false);
         hierarchy.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
         hierarchy.setShowsRootHandles(true);
-        customCellRenderer = new CustomTreeCellRenderer();
         //TODO: create Tree Icons
         //TODO: experiment with color-coding leaf nodes via category
         customCellRenderer.setClosedIcon(new ImageIcon(ClassLoader.getSystemResource("maximizebutton.png")));
@@ -99,33 +97,24 @@ public class SidePanel extends JPanel{
         customCellRenderer.setLeafIcon(new ImageIcon(ClassLoader.getSystemResource("maximizebutton.png")));
         hierarchy.setCellRenderer(customCellRenderer);
 
-        DefaultMutableTreeNode category = null;
-        DefaultMutableTreeNode book = null;
+        DefaultMutableTreeNode categoryNode = null;
+        DefaultMutableTreeNode cardNode = null;
 
-        category = new DefaultMutableTreeNode("Books for Java Programmers");
-        rootNode.add(category);
+        for (Category category : deck.GetCategories()) {
+            categoryNode = new DefaultMutableTreeNode(category.GetName());
+            rootNode.add(categoryNode);
+            for (Card card : category.GetCards()) {
+                cardNode = new DefaultMutableTreeNode(card.GetName());
+                categoryNode.add(cardNode);
+            }
+        }
 
-        book = new DefaultMutableTreeNode("tutorial.htmlblue");
-        category.add(book);
-
-        book = new DefaultMutableTreeNode("tutorialcont.html");
-        category.add(book);
-
-        book = new DefaultMutableTreeNode("swingtutorial.html");
-        category.add(book);
-
-        category = new DefaultMutableTreeNode("Books for Java Implementers");
-        rootNode.add(category);
-
-        book = new DefaultMutableTreeNode("vm.html");
-        category.add(book);
-
-        book = new DefaultMutableTreeNode("jls.html");
-        category.add(book);
+        scrollPane.getViewport().add(hierarchy);
     }
-    //TODO: on loading new deck via the load function, pass deck to sidepanel
+
     public void LoadDeckHierarchy(Deck loadedDeck) {
         deck = loadedDeck;
+        InitializeDeckHierarchy();
     }
 
     public Deck GetCurrentDeck() {
