@@ -11,7 +11,7 @@ public class CardCreationWindow extends JFrame {
     private GridBagConstraints constraints;
 
     public CardCreationWindow() {
-        CreateWindowItems();
+        createWindowItems();
 
         this.setLayout(layout);
         this.setJMenuBar(simpleMenuBar);
@@ -31,7 +31,7 @@ public class CardCreationWindow extends JFrame {
         this.setVisible(true);
     }
 
-    private void CreateWindowItems() {
+    private void createWindowItems() {
         layout = new GridBagLayout();
         constraints = new GridBagConstraints();
         simpleMenuBar = new SimpleMenuBar(this, "Card Creator");

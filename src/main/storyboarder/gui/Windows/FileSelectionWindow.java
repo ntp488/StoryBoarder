@@ -32,10 +32,10 @@ public class FileSelectionWindow extends JFrame{
                 System.out.println("You chose the file " + selectedFile.getName());
                 switch (type) {
                     case Save:
-                        SaveDeck(selectedFile);
+                        saveDeck(selectedFile);
                         break;
                     case Load:
-                        LoadDeck(selectedFile);
+                        loadDeck(selectedFile);
                         break;
                 }
             }  else if (command.equals(JFileChooser.CANCEL_SELECTION)) {
@@ -46,7 +46,7 @@ public class FileSelectionWindow extends JFrame{
 
     public FileSelectionWindow(String buttonText, WindowType windowType, SidePanel currentSidePanel) {
         sidePanel = currentSidePanel;
-        CreateWindowItems();
+        createWindowItems();
         type = windowType;
         this.setLayout(layout);
         this.setJMenuBar(simpleMenuBar);
@@ -69,19 +69,19 @@ public class FileSelectionWindow extends JFrame{
         this.setVisible(true);
     }
 
-    private void CreateWindowItems() {
+    private void createWindowItems() {
         layout = new GridBagLayout();
         constraints = new GridBagConstraints();
         simpleMenuBar = new SimpleMenuBar(this);
         fileChooser = new JFileChooser();
     }
 
-    private void LoadDeck(File file) {
+    private void loadDeck(File file) {
         if (file.exists()) {
-            ReadFile(file);
+            readFile(file);
         } else if (new File(file.getAbsolutePath() + ".json").exists()) {
             file = new File(file.getAbsolutePath() + ".json");
-            ReadFile(file);
+            readFile(file);
         }else {
             System.out.println("You chose a file that doesn't exist.");
             JOptionPane optionPane = new JOptionPane();
@@ -92,12 +92,12 @@ public class FileSelectionWindow extends JFrame{
         this.dispose();
     }
 
-    private void ReadFile(File file) {
+    private void readFile(File file) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
             Deck loadedDeck = mapper.readValue(file, Deck.class);
-            sidePanel.LoadDeckHierarchy(loadedDeck);
+            sidePanel.loadDeckHierarchy(loadedDeck);
             System.out.println(loadedDeck.toString());
         } catch (IOException e) {
             e.printStackTrace();
@@ -106,7 +106,7 @@ public class FileSelectionWindow extends JFrame{
         }
     }
 
-    private void SaveDeck(File file) {
+    private void saveDeck(File file) {
         if (file.getAbsolutePath().endsWith(".json")) {
         } else {
             File tempFile = file;
@@ -122,23 +122,23 @@ public class FileSelectionWindow extends JFrame{
                 case JOptionPane.NO_OPTION:
                     break;
                 case JOptionPane.YES_OPTION:
-                    WriteFile(file);
+                    writeFile(file);
                     break;
                 case JOptionPane.CLOSED_OPTION:
                     break;
             }
         } else {
-            WriteFile(file);
+            writeFile(file);
         }
         this.dispose();
     }
 
-    private void WriteFile(File file) {
+    private void writeFile(File file) {
         try {
             file.createNewFile();
             ObjectMapper mapper = new ObjectMapper();
             mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-            mapper.writeValue(file, sidePanel.GetCurrentDeck());
+            mapper.writeValue(file, sidePanel.getCurrentDeck());
         } catch (IOException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, e.toString(), "Error Saving",

@@ -1,9 +1,7 @@
 package storyboarder;
 
 import com.fasterxml.jackson.annotation.*;
-
 import java.util.ArrayList;
-
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
 
 @JsonAutoDetect(creatorVisibility = ANY, fieldVisibility = ANY)
@@ -11,7 +9,7 @@ import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
 public class Category {
-    private int id = Deck.GenerateID();
+    private int id = Deck.generateID();
     private String name;
     private ArrayList<Property> properties;
     private ArrayList<Card> cards;
@@ -20,22 +18,22 @@ public class Category {
     public Category(@JsonProperty("name") String categoryName){
         name = categoryName;
         properties = new ArrayList<>();
-        SetCards(new ArrayList<>());
+        setCards(new ArrayList<>());
     }
 
-    public void AddProperty(Property property) {
+    public void addProperty(Property property) {
         properties.add(property);
     }
 
-    public void AddCard(Card newCard) {
-        GetCards().add(newCard);
+    public void addCard(Card newCard) {
+        getCards().add(newCard);
     }
 
-    public String GetName() {
+    public String getName() {
         return name;
     }
 
-    public void SetName(String newName) {
+    public void setName(String newName) {
         this.name = newName;
     }
 
@@ -48,19 +46,19 @@ public class Category {
             categoryAsString += "       " + prop.toString() + "\n";
         }
         categoryAsString += "   Cards: \n";
-        if (GetCards() != null) {
-            for (Card card : GetCards()) {
+        if (getCards() != null) {
+            for (Card card : getCards()) {
                 categoryAsString += "       " + card.toString() + "\n";
             }
         }
         return categoryAsString;
     }
 
-    public ArrayList<Card> GetCards() {
+    public ArrayList<Card> getCards() {
         return cards;
     }
 
-    public void SetCards(ArrayList<Card> cards) {
+    public void setCards(ArrayList<Card> cards) {
         this.cards = cards;
     }
 }

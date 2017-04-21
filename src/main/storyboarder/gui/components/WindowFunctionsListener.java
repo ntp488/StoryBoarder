@@ -22,7 +22,7 @@ public class WindowFunctionsListener implements MouseListener {
         minimizeButton = panel.minimizeButton;
         saveProjectButton = panel.saveProjectButton;
         loadProjectButton = panel.loadProjectButton;
-        maximizedWindowSize = panel.window.GetMaximumWindowSize();
+        maximizedWindowSize = panel.window.getMaximumWindowSize();
     }
 
     @Override
@@ -32,7 +32,7 @@ public class WindowFunctionsListener implements MouseListener {
         } else if (e.getComponent().equals(maximizeButton)) {
             if (window.getSize().height != window.maximizedWindowSize.height ||
                     window.getSize().width != window.maximizedWindowSize.width) {
-                MaximizeWindow();
+                maximizeWindow();
             } else {
                 window.setSize(previousWindowSize);
                 window.setLocation(previousWindowLocation);
@@ -49,20 +49,20 @@ public class WindowFunctionsListener implements MouseListener {
             if (fileSelectionWindow != null) {
                 fileSelectionWindow.dispose();
                 fileSelectionWindow = new FileSelectionWindow("Load",
-                    FileSelectionWindow.WindowType.Load, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Load, window.getSidePanel());
             } else {
                 fileSelectionWindow = new FileSelectionWindow("Load",
-                    FileSelectionWindow.WindowType.Load, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Load, window.getSidePanel());
             }
         } else if (e.getComponent().equals(saveProjectButton)) {
             System.out.println("Save Project");
             if (fileSelectionWindow != null) {
                 fileSelectionWindow.dispose();
                 fileSelectionWindow = new FileSelectionWindow("Save",
-                    FileSelectionWindow.WindowType.Save, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Save, window.getSidePanel());
             } else {
                 fileSelectionWindow = new FileSelectionWindow("Save",
-                    FileSelectionWindow.WindowType.Save, window.GetSidePanel());
+                    FileSelectionWindow.WindowType.Save, window.getSidePanel());
             }
         }
     }
@@ -90,7 +90,7 @@ public class WindowFunctionsListener implements MouseListener {
         }
     }
 
-    private void MaximizeWindow() {
+    private void maximizeWindow() {
         previousWindowSize = window.getSize();
         previousWindowLocation = window.getLocation();
         window.setSize(maximizedWindowSize);

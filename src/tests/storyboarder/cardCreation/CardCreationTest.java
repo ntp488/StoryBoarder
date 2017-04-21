@@ -13,7 +13,7 @@ public class CardCreationTest {
     private void Setup() {
         //manuallyCreatedCard = new Card();
         //manuallyCreatedCard.SetCategory();
-        //manuallyCreatedCard.SetName();
+        //manuallyCreatedCard.setName();
         //manuallyCreatedCard.SetDescription();
     }
 

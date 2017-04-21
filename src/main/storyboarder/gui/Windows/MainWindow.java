@@ -23,7 +23,7 @@ public class MainWindow extends JFrame {
 
     public MainWindow() {
         window = this;
-        InitializeWindowItems();
+        initializeWindowItems();
 
         this.setLayout(layout);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +51,7 @@ public class MainWindow extends JFrame {
 
         this.setJMenuBar(controlPanel);
 
-        this.setIconImages(GenerateWindowIcons());
+        this.setIconImages(generateWindowIcons());
 
         this.pack();
         this.setResizable(true);
@@ -62,11 +62,11 @@ public class MainWindow extends JFrame {
 
     }
 
-    public Dimension GetMaximumWindowSize() {
+    public Dimension getMaximumWindowSize() {
         return maximizedWindowSize;
     }
 
-    private ArrayList<Image> GenerateWindowIcons() {
+    private ArrayList<Image> generateWindowIcons() {
         ArrayList<Image> imageIcons = new ArrayList<>();
         ImageIcon icon = new ImageIcon("images/StoryboarderLogo.png");
         imageIcons.add(icon.getImage());
@@ -77,7 +77,7 @@ public class MainWindow extends JFrame {
         return imageIcons;
     }
 
-    private void InitializeWindowItems() {
+    private void initializeWindowItems() {
         layout = new GridBagLayout();
         constraints = new GridBagConstraints();
         compResizer = new ComponentResizer();
@@ -86,7 +86,7 @@ public class MainWindow extends JFrame {
         controlPanel = new WindowControlPanel(this);
     }
 
-    public SidePanel GetSidePanel() {
+    public SidePanel getSidePanel() {
         return sidePanel;
     }
 }

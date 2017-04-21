@@ -11,40 +11,40 @@ public class Deck {
 
     //TODO: move default deck creation to test class
     public Deck() {
-        SetName("DefaultName");
-        SetCategories(new ArrayList<>());
+        setName("DefaultName");
+        setCategories(new ArrayList<>());
         ids = new ArrayList();
         Category people = new Category("Person");
-        people.AddProperty(new Property("Health", Property.PropertyType.Number));
+        people.addProperty(new Property("Health", Property.PropertyType.Number));
         Card person = new Card("Zack", "A real jerk..", people);
-        people.AddCard(person);
+        people.addCard(person);
 
         Category places = new Category("Place");
-        places.AddProperty(new Property("Zipcode", Property.PropertyType.Number));
+        places.addProperty(new Property("Zipcode", Property.PropertyType.Number));
         Card place = new Card("Wall-mart", "Where you go for all the things.", places);
-        places.AddCard(place);
+        places.addCard(place);
 
         Category things = new Category("Things");
-        things.AddProperty(new Property("Weight", Property.PropertyType.Number));
+        things.addProperty(new Property("Weight", Property.PropertyType.Number));
         Card thing = new Card("Rock", "Really more like a pebble.", things);
-        things.AddCard(thing);
+        things.addCard(thing);
 
-        GetCategories().add(people);//person
-        GetCategories().add(places);//place
-        GetCategories().add(things);//thing
+        getCategories().add(people);//person
+        getCategories().add(places);//place
+        getCategories().add(things);//thing
     }
 
     @Override
     public String toString() {
         String deckAsString;
-        deckAsString = "Deck: " + GetName() + "\n";
-        for (Category cat : GetCategories()) {
+        deckAsString = "Deck: " + getName() + "\n";
+        for (Category cat : getCategories()) {
             deckAsString += cat.toString();
         }
         return deckAsString;
     }
 
-    public static int GenerateID() {
+    public static int generateID() {
         int temp = random.nextInt(2147483646);
         while (ids.contains(temp)) {
             temp = random.nextInt(2147483646);
@@ -52,19 +52,19 @@ public class Deck {
         return temp;
     }
 
-    public String GetName() {
+    public String getName() {
         return name;
     }
 
-    public void SetName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public ArrayList<Category> GetCategories() {
+    public ArrayList<Category> getCategories() {
         return categories;
     }
 
-    public void SetCategories(ArrayList<Category> categories) {
+    public void setCategories(ArrayList<Category> categories) {
         this.categories = categories;
     }
 }

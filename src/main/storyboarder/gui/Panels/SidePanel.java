@@ -23,7 +23,7 @@ public class SidePanel extends JPanel{
 
     public SidePanel(){
         deck = new Deck();
-        CreatePanelItems();
+        createPanelItems();
 
         layout = new BoxLayout(this, BoxLayout.Y_AXIS);
         this.setLayout(layout);
@@ -40,7 +40,7 @@ public class SidePanel extends JPanel{
         this.add(Box.createVerticalGlue());
     }
 
-    private void CreatePanelItems() {
+    private void createPanelItems() {
         createCharacterButton = new SimpleDarkButton(buttonDimension);
         createCharacterButton.setText("Create Card");
         createCharacterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -77,11 +77,11 @@ public class SidePanel extends JPanel{
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        InitializeDeckHierarchy();
+        initializeDeckHierarchy();
     }
 
-    private void InitializeDeckHierarchy() {
-        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(deck.GetName());
+    private void initializeDeckHierarchy() {
+        DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(deck.getName());
         DefaultTreeModel treeModel = new DefaultTreeModel(rootNode);
         DefaultTreeCellRenderer customCellRenderer = new CustomTreeCellRenderer();
 
@@ -100,11 +100,11 @@ public class SidePanel extends JPanel{
         DefaultMutableTreeNode categoryNode = null;
         DefaultMutableTreeNode cardNode = null;
 
-        for (Category category : deck.GetCategories()) {
-            categoryNode = new DefaultMutableTreeNode(category.GetName());
+        for (Category category : deck.getCategories()) {
+            categoryNode = new DefaultMutableTreeNode(category.getName());
             rootNode.add(categoryNode);
-            for (Card card : category.GetCards()) {
-                cardNode = new DefaultMutableTreeNode(card.GetName());
+            for (Card card : category.getCards()) {
+                cardNode = new DefaultMutableTreeNode(card.getName());
                 categoryNode.add(cardNode);
             }
         }
@@ -112,12 +112,12 @@ public class SidePanel extends JPanel{
         scrollPane.getViewport().add(hierarchy);
     }
 
-    public void LoadDeckHierarchy(Deck loadedDeck) {
+    public void loadDeckHierarchy(Deck loadedDeck) {
         deck = loadedDeck;
-        InitializeDeckHierarchy();
+        initializeDeckHierarchy();
     }
 
-    public Deck GetCurrentDeck() {
+    public Deck getCurrentDeck() {
         return deck;
     }
 }

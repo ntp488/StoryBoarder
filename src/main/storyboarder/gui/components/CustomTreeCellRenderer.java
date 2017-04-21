@@ -5,7 +5,6 @@ import javax.swing.tree.*;
 import java.awt.*;
 
 public class CustomTreeCellRenderer extends DefaultTreeCellRenderer {
-
     @Override
     public Color getBackgroundNonSelectionColor() {
         return null;

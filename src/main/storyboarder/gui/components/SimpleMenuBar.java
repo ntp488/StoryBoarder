@@ -95,7 +95,7 @@ public class SimpleMenuBar extends JMenuBar{
 
     public SimpleMenuBar(JFrame parentWindow) {
         window = parentWindow;
-        CreatePanelItems();
+        createPanelItems();
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
 
@@ -115,7 +115,7 @@ public class SimpleMenuBar extends JMenuBar{
     public SimpleMenuBar(JFrame parentWindow, String windowName) {
         window = parentWindow;
         name = new JLabel(windowName);
-        CreatePanelItems();
+        createPanelItems();
 
         layout = new BoxLayout(this, BoxLayout.X_AXIS);
 
@@ -139,7 +139,7 @@ public class SimpleMenuBar extends JMenuBar{
         return window;
     }
 
-    private void CreatePanelItems() {
+    private void createPanelItems() {
         ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("StoryboarderLogo.png"));
         Image newimg = icon.getImage().getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
@@ -147,24 +147,24 @@ public class SimpleMenuBar extends JMenuBar{
 
         //CREATING WINDOW FUNCTION BUTTONS -----------------------------------
         minimizeButton = new JMenu();
-        SetMenuIcon(minimizeButton, "minimizebutton.png");
-        DecorateMenu(minimizeButton);
+        setMenuIcon(minimizeButton, "minimizebutton.png");
+        decorateMenu(minimizeButton);
         minimizeButton.addMouseListener(windowFunctionsListener);
 
         exitButton = new JMenu();
-        SetMenuIcon(exitButton, "exitbutton.png");
-        DecorateMenu(exitButton);
+        setMenuIcon(exitButton, "exitbutton.png");
+        decorateMenu(exitButton);
         exitButton.addMouseListener(windowFunctionsListener);
     }
 
-    private void SetMenuIcon(JMenu menu, String filename) {
+    private void setMenuIcon(JMenu menu, String filename) {
         ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource(filename));
         Image newimg = icon.getImage().getScaledInstance(20, 15, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newimg);
         menu.setIcon(icon);
     }
 
-    private void DecorateMenu(JMenu menu) {
+    private void decorateMenu(JMenu menu) {
         menu.setForeground(Color.white);
         menu.setBackground(Color.DARK_GRAY);
     }
