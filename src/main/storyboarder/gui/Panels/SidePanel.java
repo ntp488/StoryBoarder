@@ -12,7 +12,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class SidePanel extends JPanel{
-    private JButton createCharacterButton, createCategoryButton;
+    private JButton createCardButton, createCategoryButton;
     private JScrollPane scrollPane;
     private JTree hierarchy;
     private Dimension buttonDimension = new Dimension(150, 30),
@@ -31,7 +31,7 @@ public class SidePanel extends JPanel{
         this.setBorder(BorderFactory.createEtchedBorder());
 
         this.add(new JToolBar.Separator(separatorDimension));
-        this.add(createCharacterButton);
+        this.add(createCardButton);
         this.add(new JToolBar.Separator(separatorDimension));
         this.add(createCategoryButton);
         this.add(new JToolBar.Separator(separatorDimension));
@@ -41,14 +41,18 @@ public class SidePanel extends JPanel{
     }
 
     private void createPanelItems() {
-        createCharacterButton = new SimpleDarkButton(buttonDimension);
-        createCharacterButton.setText("Create Card");
-        createCharacterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        createCardButton = new SimpleDarkButton(buttonDimension);
+        createCardButton.setText("Create Card");
+        createCardButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        createCharacterButton.addActionListener(new ActionListener() {
+        createCardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (creationWindow == null) {
+                    //TODO: use reloadDeckHierarchy wherever card creation is completed
+                    deck.getCategories().get(0).addCard(
+                            new Card("TestHierarchyReloadCard", "desc", deck.getCategories().get(0)));
+                    reloadDeckHierarchy();
                     creationWindow = new CardCreationWindow();
                 } else {
                     creationWindow.dispose();
@@ -119,9 +123,5 @@ public class SidePanel extends JPanel{
 
     public Deck getCurrentDeck() {
         return deck;
-    }
-
-    public boolean checkForDeckChange() {
-        return deck.detectChange();
     }
 }

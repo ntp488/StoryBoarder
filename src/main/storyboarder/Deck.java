@@ -68,12 +68,4 @@ public class Deck {
     public void setCategories(ArrayList<Category> categories) {
         this.categories = categories;
     }
-
-    public boolean detectChange() {
-        return hasChanged;
-    }
-
-    public void alertDeckToChange() {
-        hasChanged = true;
-    }
 }
