@@ -1,4 +1,4 @@
-package storyboarder.cardCreation;
+package storyboarder.gui.cardCreation;
 
 import storyboarder.gui.components.SimpleMenuBar;
 

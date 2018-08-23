@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import storyboarder.Deck;
 import storyboarder.gui.Panels.SidePanel;
-import storyboarder.gui.components.SimpleMenuBar;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
@@ -12,9 +11,6 @@ import java.awt.event.*;
 import java.io.*;
 
 public class FileSelectionWindow extends JFrame{
-    private SimpleMenuBar simpleMenuBar;
-    private GridBagLayout layout;
-    private GridBagConstraints constraints;
     private JFileChooser fileChooser;
     public enum WindowType{
         Save, Load
@@ -48,16 +44,14 @@ public class FileSelectionWindow extends JFrame{
         sidePanel = currentSidePanel;
         createWindowItems();
         type = windowType;
-        this.setLayout(layout);
-        this.setJMenuBar(simpleMenuBar);
         fileChooser.setApproveButtonText(buttonText);
         fileChooser.setFileFilter(new FileNameExtensionFilter(".json","json"));
         fileChooser.addActionListener(fileChooserListener);
         this.add(fileChooser);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        this.setUndecorated(true);
         BorderFactory.createLineBorder(Color.black);
         this.setMinimumSize(new Dimension(500, 450));
+        this.setMaximumSize(new Dimension(500, 450));
         Point middleOfScreen = new Point(
         Toolkit.getDefaultToolkit().getScreenSize().width/2 - 250,
         Toolkit.getDefaultToolkit().getScreenSize().height/2 - 225
@@ -70,9 +64,6 @@ public class FileSelectionWindow extends JFrame{
     }
 
     private void createWindowItems() {
-        layout = new GridBagLayout();
-        constraints = new GridBagConstraints();
-        simpleMenuBar = new SimpleMenuBar(this);
         fileChooser = new JFileChooser();
     }
 

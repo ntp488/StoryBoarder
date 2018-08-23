@@ -6,7 +6,6 @@
         <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="src" />
-      <element id="module-output" name="resources" />
       <element id="extracted-dir" path="$PROJECT_DIR$/jackson-annotations-2.8.8.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/jackson-core-2.8.8.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/jackson-databind-2.8.8.jar" path-in-jar="/" />

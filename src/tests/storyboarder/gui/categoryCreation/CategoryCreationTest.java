@@ -1,4 +1,4 @@
-package storyboarder.categoryCreation;
+package storyboarder.gui.categoryCreation;
 
 /**
  * Created by Nathan on 4/17/2017.

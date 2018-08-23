@@ -1,6 +1,6 @@
-package storyboarder.cardCreation;
+package storyboarder.gui.cardCreation;
 
-import org.junit.jupiter.api.BeforeEach;
+//import org.junit.jupiter.api.BeforeEach;
 import storyboarder.Card;
 
 /**
@@ -9,7 +9,7 @@ import storyboarder.Card;
 public class CardCreationTest {
     private Card manuallyCreatedCard;
 
-    @BeforeEach
+    //@BeforeEach
     private void Setup() {
         //manuallyCreatedCard = new Card();
         //manuallyCreatedCard.SetCategory();

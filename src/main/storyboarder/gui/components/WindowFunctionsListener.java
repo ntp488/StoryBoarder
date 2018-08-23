@@ -17,9 +17,9 @@ public class WindowFunctionsListener implements MouseListener {
     public Point previousWindowLocation = new Point(0, 0);
 
     public WindowFunctionsListener(WindowControlPanel panel) {
-        exitButton = panel.exitButton;
+        /*exitButton = panel.exitButton;
         maximizeButton = panel.maximizeButton;
-        minimizeButton = panel.minimizeButton;
+        minimizeButton = panel.minimizeButton;*/
         saveProjectButton = panel.saveProjectButton;
         loadProjectButton = panel.loadProjectButton;
         maximizedWindowSize = panel.window.getMaximumWindowSize();

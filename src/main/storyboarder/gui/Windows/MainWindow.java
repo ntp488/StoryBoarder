@@ -3,7 +3,6 @@ package storyboarder.gui.Windows;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-
 import storyboarder.gui.Panels.*;
 import storyboarder.gui.components.ComponentResizer;
 
@@ -27,7 +26,6 @@ public class MainWindow extends JFrame {
 
         this.setLayout(layout);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setUndecorated(true);
         BorderFactory.createLineBorder(Color.black);
         compResizer.registerComponent(this);
         this.setMinimumSize(new Dimension(900, 450));

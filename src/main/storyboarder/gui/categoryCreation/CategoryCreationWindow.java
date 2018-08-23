@@ -1,4 +1,4 @@
-package storyboarder.categoryCreation;
+package storyboarder.gui.categoryCreation;
 
 import storyboarder.gui.components.SimpleMenuBar;
 
